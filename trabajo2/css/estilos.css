@@ -53,22 +53,26 @@ header{
             display: flex;
 
             .ubicacion{
+                display: flex;
                 height: 40px;
                 width: 40px;
                 background-color: greenyellow;
-                font-size: 30px;
-                text-align: center;
+                font-size: 28px;
+                justify-content: center;
+                align-items: center;
             }
 
             input[type=search]{
                 height: 40px;
                 width: calc(100% - 80px);
+                border: 0px white;
             }
 
             input[type=submit]{
                 height: 40px;
                 width: 40px;
-                background-color: red;
+                background-color: greenyellow;
+                border: 0 white;
             }
         }
     }

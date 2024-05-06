@@ -21,3 +21,8 @@
   --webkit-font-feature-settings: 'liga';
   --webkit-font-smoothing: antialiased;
 }
+
+.tamaño{
+  font-size: 25px;
+  cursor: pointer;
+}
