@@ -7,6 +7,7 @@
 body{
     height: 100vh;
     width: 100%;
+    overflow-x: hidden;
 }
 
 header{
@@ -139,7 +140,7 @@ main{
                 border-radius: 10px 0 0 10px;
                 left: 0;
             }
-            .texto{
+            .datos{
                 position: absolute;
                 display: flex;
                 height: 100%;
@@ -147,8 +148,42 @@ main{
                 background-color: blue;
                 font-size: 20px;
                 border-radius: 0 0 0 20px;
-                padding: 20px;
                 right: 0;
+                padding: 10px;
+                .texto{
+                    display: flex;
+                    height: 95%;
+                    width: 100%;
+                    padding: 10px;
+                    background-color: aquamarine;
+                    gap:15px;
+                    flex-direction: column;
+
+                    .caja{
+                        display: flex;
+                        height: auto;
+                        width: 100%;
+                        justify-content: space-between;
+                        .plata{
+                            display: flex;
+                            i:nth-child(1){
+                                color: red;
+                            }
+                            i:nth-child(2){
+                                color: red;
+                            }
+                        }
+                        .estrellas{
+                            display: flex;
+                            span{
+                                color: red;
+                            }
+                            span:nth-child(5){
+                                color: gray;
+                            }
+                        }
+                    }
+                }
             }
             .puntuacion{
                 position: absolute;
@@ -159,6 +194,17 @@ main{
                 border-radius: 15px 0 15px 0;
                 padding: 5px;
             }
+            .distancia{
+                position: absolute;
+                left: -14%;
+                top: 5%;
+                color: aliceblue;
+            }
+        }
+        .resto:hover{
+            transition: all 0.2s ease-in-out;
+            transform: scale(1.02);
+
         }
     }
 }
