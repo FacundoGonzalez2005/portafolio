@@ -95,14 +95,16 @@ header{
             padding: 4%;
         }
         & i{
-            background-color: white;
             border-radius: 5px;
             font-size: 30px;
             padding: 10%;
-            box-shadow: 0px 0px 5px black;
             cursor: pointer;
         }
         & i:hover{
+            color: red;
+            transform: scale(1.1);
+        }
+        & p:hover{
             color: red;
             transform: scale(1.1);
         }
@@ -112,7 +114,6 @@ header{
 main{
     height: 30% auto; /*/ pone auto para ampliarse automaticamente*/
     width: 100%;
-    background-color: crimson;
     padding: 10px;
 
     .resultados{
@@ -127,7 +128,6 @@ main{
             display: flex;
             height: 190px;
             width: 100%;
-            background-color: orange;
             color: white;
             flex-direction: row;
 
@@ -138,6 +138,8 @@ main{
                 width: 50%;
                 background-color: aqua;
                 border-radius: 10px 0 0 10px;
+                background-image: url(../img/resta.jpg);
+                background-size: cover;
                 left: 0;
             }
             .datos{
@@ -145,7 +147,7 @@ main{
                 display: flex;
                 height: 100%;
                 width: 60%;
-                background-color: blue;
+                background-color: aquamarine;
                 font-size: 20px;
                 border-radius: 0 0 0 20px;
                 right: 0;
@@ -155,7 +157,6 @@ main{
                     height: 95%;
                     width: 100%;
                     padding: 10px;
-                    background-color: aquamarine;
                     gap:15px;
                     flex-direction: column;
 
