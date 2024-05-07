@@ -84,7 +84,6 @@ header{
         width: 100%;
         display: flex;
         background-color: yellow;
-        overflow-x: scroll;
         & .comida{
             width: 100%;
             display: flex;
@@ -93,20 +92,18 @@ header{
             flex-direction: column;
             justify-content: space-around;
             padding: 4%;
-        }
-        & i{
-            border-radius: 5px;
-            font-size: 30px;
-            padding: 10%;
             cursor: pointer;
         }
-        & i:hover{
-            color: red;
-            transform: scale(1.1);
+        & i{
+            font-size: 30px;
         }
-        & p:hover{
-            color: red;
+        & p{
+            padding-top: 10%;
+        }
+        & .comida:hover{
+            cursor: pointer;
             transform: scale(1.1);
+            color: red;
         }
     }
 }
