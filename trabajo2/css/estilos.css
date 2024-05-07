@@ -207,34 +207,94 @@ main{
     }
 }
 
-/* sirve para adaptarse al momento que detecte el cambio de tamaño de pantalla, usamos las etiquetas y clases que queremos que cambie*/
-/* @media (orientation: landscape){
+/*/ sirve para adaptarse al momento que detecte el cambio de tamaño de pantalla, usamos las etiquetas y clases que queremos que cambie*/
+@media (orientation: landscape){
     main{
         .resultados{
             flex-direction: row;
             flex-wrap: wrap;
-            
-            .resto{ */
-                /* flex-grow: 0; capacidad de agradar si hay espacio en el contenedero padre*/
-                /* flex-shrink: 0; es la capacidad de achicarse y poner columna en el 1*/
-                /* flex-basis: 50%; */
-                /* flex: 0 0 calc(50% - 10px); estamos haciendo que el flex carcule el tamaño para que se adapte */
-                /* background-color: blue;
+            position: relative;
+
+            .resto{
+                /*/ flex-grow: 0; capacidad de agradar si hay espacio en el contenedero padre*/
+                /*/ flex-shrink: 0; es la capacidad de achicarse y poner columna en el 1*/
+                /*/ flex-basis: 50%; */
+                flex: 0 0 calc(50% - 10px); /*/estamos haciendo que el flex carcule el tamaño para que se adapte*/
+                background-color: blue;
                 display: flex;
                 padding: 10px;
-                .imagen{
-                    background-color: aqua;
-                    height: 100%;
-                    width: 30%;
+                .tarjeta{
+                    width: 150%;
+                    cursor: pointer;
+                    padding: 10px;  
+                    background-color: chocolate;
+                    display: flex;
+                    position: relative;
+                    .imagen{
+                        height: 100%;
+                        width: 35%;
+                        background-image: url("../img/resta.jpg");
+                        background-size: cover;
+                        border-radius: 7% 0 0 7%;
+                        .distancia{
+                            position: absolute;
+                            font-size: 15px;
+                            right: 13%;
+                            top: 10%;
+                        }
+                    }
+                    .texto{
+                        padding-left: 1.5%;
+                        padding-top: 0.6%;
+                        background-color: palegoldenrod;
+                        height: 40%;
+                        width: 32%;
+                        left: 16%;
+                        font-size: 15px;
+                        border-radius: 0 0 10px 10px;
+                        h2{
+                            padding-bottom: 1%;
+                        }
+                        .puntuaciones{
+                            display: flex;
+                            height: auto;
+                            width: 100%;
+                            flex-wrap: wrap;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            margin-top: 5%;
+                            .estrellas{
+                                .fa-solid{
+                                    color: red;
+                                }
+                            }
+                            .precio{  
+                                padding-right: 5%;                       
+                                i:nth-child(1){
+                                    color: red;
+                                }
+                                i:nth-child(2){
+                                    color: red;
+                                }
+                            }
+                        }
+                        
+                    }
+                    .puntuacion{
+                        height: 12%;
+                        width: 3%;
+                        position: absolute;
+                        left: 46%;
+                        top: 1%;
+                        background-color: aqua;
+                        border-radius: 10px 0 10px 0;
+                        font-size: 20px;
+                        text-align: center;
+                        padding-top: 0.5%;
+                    }
                 }
-                .texto{
-                    background-color: palegoldenrod;
-                    height: 100%;
-                    width: 70%;
-                    font-size: 15px;
-                    
-                }
+                
             }
         }
     }
-} */
+}
