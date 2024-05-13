@@ -13,7 +13,6 @@ body{
 header{
     height: 70%;
     width: 100%;
-    background-color: aquamarine;
 
     .portada{
         height: 70%;
@@ -58,23 +57,27 @@ header{
                 display: flex;
                 height: 40px;
                 width: 40px;
-                background-color: greenyellow;
+                background-color: aquamarine;
                 font-size: 28px;
                 justify-content: center;
                 align-items: center;
+                color: white;
             }
 
             input[type=search]{
                 height: 40px;
                 width: calc(100% - 80px);
                 border: 0px white;
+                border: 0;
+                padding: 0 10px;
             }
 
             input[type=submit]{
                 height: 40px;
                 width: 40px;
-                background-color: greenyellow;
-                border: 0 white;
+                border: 0 gray;
+                cursor: pointer;
+                color: gray;
             }
         }
     }
@@ -83,7 +86,6 @@ header{
         height: 30%;
         width: 100%;
         display: flex;
-        background-color: rgb(228, 228, 83);
         overflow-x:scroll;
         & .comida{
             width: 100%;
@@ -294,7 +296,6 @@ main{
                         padding-top: 0.5%;
                     }
                 }
-                
             }
         }
     }
