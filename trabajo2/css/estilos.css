@@ -83,7 +83,8 @@ header{
         height: 30%;
         width: 100%;
         display: flex;
-        background-color: yellow;
+        background-color: rgb(228, 228, 83);
+        overflow-x:scroll;
         & .comida{
             width: 100%;
             display: flex;
@@ -91,8 +92,9 @@ header{
             font-family: Arial, Helvetica, sans-serif;
             flex-direction: column;
             justify-content: space-around;
-            padding: 4%;
+            padding: 5%;
             cursor: pointer;
+            
         }
         & i{
             font-size: 30px;
@@ -220,7 +222,6 @@ main{
                 /*/ flex-shrink: 0; es la capacidad de achicarse y poner columna en el 1*/
                 /*/ flex-basis: 50%; */
                 flex: 0 0 calc(50% - 10px); /*/estamos haciendo que el flex carcule el tamaño para que se adapte*/
-                background-color: blue;
                 display: flex;
                 padding: 10px;
                 .tarjeta{
