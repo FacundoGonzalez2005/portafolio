@@ -1,0 +1,76 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+ 
+.pa{
+    position: absolute;
+}
+
+.pr{
+    position: relative;
+}
+
+.centgrid{
+    /* sirve para centrar solo un elemento */
+    display: grid;
+    place-items: center;
+}
+
+.centflex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex100{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sombra{
+    box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.5);
+}
+
+.img_fit{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.resto_image{
+    height: 40%;
+    width: 100%;
+    background-color: yellow;
+    .resto_precio{
+        height: 40px;
+        width: auto;
+        background-color: aqua;
+        right: 15px;
+        bottom: -15px;
+        border-radius: 8px 0;
+        padding: 8px;
+        font-weight: 700;
+        color: white;
+    }
+}
+
+.resto_desc{
+    height: fit-content;
+    min-height: 60%;
+    width: 100%;
+    background-color: red;
+    padding: 15px;
+    padding-top: 30px;
+    padding-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.resto_menu{
+    position: fixed; /* lo que hace es que fija una clase en la posiscion que vos quieras */
+    bottom: 0; /* ejemplo del fixed */
+    height: 60px;
+    width: 100%;
+    background-color: rgb(182, 69, 69);
+}
