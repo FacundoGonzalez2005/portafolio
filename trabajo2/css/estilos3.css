@@ -1,5 +1,5 @@
 *{
-    padding: 0; margin: 0; box-sizing: border-box;
+    padding: 0; margin: 0; box-sizing: border-box; text-decoration: none;
 }
  
 .pa{
@@ -37,10 +37,21 @@
     object-fit: cover;
 }
 
+.volver{
+    font-size: 30px;
+    left: 15px;
+    top: 15px;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.452);
+    border-radius: 50%;
+    backdrop-filter: blur(2px);
+    color: black;
+}
+
 .resto_image{
     height: 40%;
     width: 100%;
-    background-color: yellow;
     .resto_precio{
         height: 40px;
         width: auto;
@@ -58,7 +69,6 @@
     height: fit-content;
     min-height: 60%;
     width: 100%;
-    background-color: red;
     padding: 15px;
     padding-top: 30px;
     padding-bottom: 75px;
@@ -72,5 +82,27 @@
     bottom: 0; /* ejemplo del fixed */
     height: 60px;
     width: 100%;
-    background-color: rgb(182, 69, 69);
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.btn_menu{
+    flex: 1;
+    text-decoration: none;
+    font-weight: bold;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.btn_menu.active{
+    border-top: solid 4px aquamarine;
+}
+
+.titulo_menu{
+    height: 60px;
+    width: 100%;
+    display: grid;
+    place-items: center;
 }
