@@ -16,26 +16,36 @@ body{
 .contenido{
     height: 410px;
     width: 100%;
-    background-color: aqua;
     position: relative;
     padding: 15px;
     .titulo{
         height: 100px;
         width: 100%;
-        background-color: chartreuse;
+        font-size: 60px;
+
     }
     .precio{
         height: 80px;
         width: 120px;
+        display: flex;
         position: absolute;
-        background-color: blue;
+        background-color: rgb(112, 211, 102);
         right: 4%;
         top: 6%;
+        font-size: 35px;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px 0 15px 0;
+        box-shadow: 0 10px 5px -4px rgba(128, 128, 128, 0.664);
     }
     .descripcion{
+        display: flex;
         height: 200px;
         width: 100%;
-        background-color: yellow;
+        align-items: center;
+        color: rgba(128, 128, 128, 0.705);
+        
     }
     input[type=search].comentario{
         height: 80px;
@@ -49,17 +59,28 @@ body{
     height: 100px;
     width: 100%;
     display: flex;
-    background-color: blueviolet;
     gap: 5px;
     padding: 15px;
     .contador{
+        display: flex;
         width: 30%;
         height: 100%;
-        background-color: red;
+        background-color: rgb(112, 211, 102);
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
     }
     .carrito{
+        display: flex;
         width: 70%;
         height: 100%;
-        background-color: aquamarine;
+        background-color: rgb(112, 211, 102);
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
     }
 }
