@@ -114,6 +114,24 @@
     place-items: center;
 }
 
+.subtitulo_menu{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    color: gray;
+    h2{
+        padding-bottom: 6px;
+        margin-top: 6px;
+    }
+}
+
+.active2{
+    display: 9;
+    width: 5%;
+    border-top: solid 4px aquamarine;
+}
+
+
 .contenedor_tarjetas{
     display: flex;
     flex-direction: column;
@@ -136,8 +154,8 @@
     .plato_desc{
         height: 100%;
         overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        /* white-space: nowrap;
+        text-overflow: ellipsis; */
     }
 }
 
