@@ -27,6 +27,10 @@
     justify-content: space-between;
 }
 
+.pd25{
+    padding: 25px;
+}
+
 .sombra{
     box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.5);
 }
@@ -52,17 +56,20 @@
 .resto_image{
     height: 40%;
     width: 100%;
-    .resto_precio{
-        height: 40px;
-        width: auto;
-        background-color: aqua;
-        right: 15px;
-        bottom: -15px;
-        border-radius: 8px 0;
-        padding: 8px;
-        font-weight: 700;
-        color: white;
-    }
+    
+}
+
+
+.tag{
+    height: 40px;
+    width: auto;
+    background-color: greenyellow;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 8px 0;
+    padding: 8px;
+    font-weight: 700;
+    color: white;
 }
 
 .resto_desc{
@@ -105,4 +112,53 @@
     width: 100%;
     display: grid;
     place-items: center;
+}
+
+.contenedor_tarjetas{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    padding-bottom: 75px;
+
+    .tarjeta{
+        display: flex;
+        flex: 1;        
+        height: 100px;
+        background-color: aqua;
+    }
+
+    .foto{
+        height: 200px;
+        flex: 0 0 150px;
+    }
+
+    .plato_desc{
+        height: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (orientation: landscape){
+    .contenedor_tarjetas{
+        flex-direction: row;
+        flex-wrap: wrap;
+        .tarjeta{
+             flex: 0 0 calc(50% - 10px);
+        }
+    }
+
+    .resto_precio{
+        height: 40px;
+        width: auto;
+        background-color: aqua;
+        right: 15px;
+        bottom: -15px;
+        border-radius: 8px 0;
+        padding: 8px;
+        font-weight: 700;
+        color: white;
+    }
 }
