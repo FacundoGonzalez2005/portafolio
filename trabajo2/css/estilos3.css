@@ -41,6 +41,10 @@
     object-fit: cover;
 }
 
+.radius{
+    border-radius: 100%;
+}
+
 .volver{
     font-size: 30px;
     left: 15px;
@@ -122,14 +126,10 @@
     h2{
         padding-bottom: 6px;
         margin-top: 6px;
+        border-bottom: solid 4px aquamarine;
     }
 }
 
-.active2{
-    display: 9;
-    width: 5%;
-    border-top: solid 4px aquamarine;
-}
 
 
 .contenedor_tarjetas{
@@ -142,13 +142,14 @@
     .tarjeta{
         display: flex;
         flex: 1;        
-        height: 100px;
-        background-color: aqua;
+        height: 70px;
     }
 
     .foto{
         height: 200px;
-        flex: 0 0 150px;
+        width: 100%;
+        background-size: 100% 100%;
+        border-radius: 50%;
     }
 
     .plato_desc{
@@ -156,6 +157,13 @@
         overflow: hidden;
         /* white-space: nowrap;
         text-overflow: ellipsis; */
+        h3{
+            padding-bottom: 20%;
+            color: black;
+        }
+        span{
+            color: gray;
+        }
     }
 }
 
