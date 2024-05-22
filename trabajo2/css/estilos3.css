@@ -187,6 +187,27 @@
             color: gray;
         }
     }
+
+    .resena{
+        height: 100%;
+        overflow: hidden;
+        /* white-space: nowrap;
+        text-overflow: ellipsis; */
+        h3{
+            font-size: 21px;
+            color: black;
+            padding-bottom: 5px;
+        }
+        h4{
+            color: black;
+            font-size: 20px;
+            padding-bottom: 10px;
+        }
+        p{
+            font-size: 18px;
+            color: gray;
+        }
+    }
 }
 
 .info{
@@ -238,6 +259,26 @@
         .tarjeta{
             flex: 0 0 calc(50% - 10px);      
             height: 300px;
+            .resena{
+                height: 100%;
+                overflow: hidden;
+                /* white-space: nowrap;
+                text-overflow: ellipsis; */
+                h3{
+                    font-size: 50px;
+                    color: black;
+                    padding-bottom: 30px;
+                }
+                h4{
+                    color: black;
+                    font-size: 30px;
+                    padding-bottom: 30px;
+                }
+                p{
+                    font-size: 25px;
+                    color: gray;
+                }
+            }
         }
         .foto{
             height: auto;
@@ -254,7 +295,7 @@
                 font-size: 20px;
                 color: gray;
             }
-    }
+        }
 }
 
     .resto_precio{
