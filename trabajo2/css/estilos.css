@@ -213,34 +213,9 @@ main{
 /*/ sirve para adaptarse al momento que detecte el cambio de tamaño de pantalla, usamos las etiquetas y clases que queremos que cambie*/
 @media (orientation: landscape){
     header{
+        height: 50%;
         .categorias{
-            height: 30%;
-            width: 100%;
-            display: flex;
-            overflow-x:scroll;
-            display: flex;
-            & .comida{
-                width: 100%;
-                display: flex;
-                align-items: center;
-                font-family: Arial, Helvetica, sans-serif;
-                flex-direction: column;
-                justify-content: space-around;
-                padding: 3%;
-                cursor: pointer;
-                
-            }
-            & i{
-                font-size: 30px;
-            }
-            & p{
-                padding-top: 5%;
-            }
-            & .comida:hover{
-                cursor: pointer;
-                transform: scale(1.1);
-                color: red;
-            }
+            overflow-y: hidden;
         }
     }
     main{
@@ -248,7 +223,6 @@ main{
             flex-direction: row;
             flex-wrap: wrap;
             position: relative;
-
             .resto{
                 /*/ flex-grow: 0; capacidad de agradar si hay espacio en el contenedero padre*/
                 /*/ flex-shrink: 0; es la capacidad de achicarse y poner columna en el 1*/
