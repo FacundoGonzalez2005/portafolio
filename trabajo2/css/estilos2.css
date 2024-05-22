@@ -2,15 +2,17 @@
     padding: 0; margin: 0; box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
+.pa{
+    position: absolute;
+}
+
+.pr{
+    position: relative;
 }
 
 .imagen{
     width: 100%;
-    height: 500px;
+    height: 300px;
 }
 
 .contenido{
@@ -21,18 +23,19 @@ body{
     .titulo{
         height: 100px;
         width: 100%;
-        font-size: 60px;
+        font-size: 30px;
 
     }
     .precio{
-        height: 80px;
-        width: 120px;
+        min-height: auto;
+        width: auto;
         display: flex;
         position: absolute;
         background-color: rgb(112, 211, 102);
         right: 4%;
-        top: 6%;
-        font-size: 35px;
+        top: 1%;
+        padding: 15px;
+        font-size: 25px;
         color: white;
         justify-content: center;
         align-items: center;
@@ -55,8 +58,9 @@ body{
     }
 }
 
+
 .boton{
-    height: 100px;
+    height: 130px;
     width: 100%;
     display: flex;
     gap: 5px;
@@ -82,5 +86,70 @@ body{
         color: white;
         font-size: 25px;
         cursor: pointer;
+    }
+}
+
+.volver{
+    font-size: 30px;
+    left: 15px;
+    top: 15px;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.452);
+    border-radius: 50%;
+    backdrop-filter: blur(2px);
+    color: black;
+    text-decoration: none;
+}
+
+.img_fit{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.resto_image{
+    height: 40%;
+    width: 100%; 
+}
+
+@media (orientation: landscape){
+    .resto_image{
+        display: grid;
+        justify-content: center;
+        height: 10%;
+        width: 100%; 
+    }
+    .contenido{
+        height: 410px;
+        width: 100%;
+        position: relative;
+        padding: 15px;
+        .titulo{
+            font-size: 60px;
+    
+        }
+        .precio{
+            font-size: 35px;
+            right: 1%;
+            top: 1%;
+        }
+        .descripcion{
+
+            font-size: 30px;
+            
+        }
+        input[type=search].comentario{
+            font-size: 25px;
+        }
+    }
+
+    .boton{
+        .contador{
+            font-size: 40px;
+        }
+        .carrito{
+            font-size: 30px;
+        }
     }
 }
