@@ -222,6 +222,8 @@
 
 @media (orientation: landscape){
     .resto_image{
+        display: grid;
+        justify-content: center;
         height: 10%;
         width: 100%; 
     }
@@ -274,4 +276,5 @@
         font-size: 30px;
         color: white;
     }
+
 }
