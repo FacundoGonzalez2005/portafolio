@@ -139,7 +139,7 @@ main{
                 width: 50%;
                 background-color: aqua;
                 border-radius: 10px 0 0 10px;
-                background-image: url(../img/resta.jpg);
+                background-image: url(../img/restaurante.jpg);
                 background-size: cover;
                 left: 0;
             }
@@ -198,9 +198,10 @@ main{
             }
             .distancia{
                 position: absolute;
-                left: -14%;
-                top: 5%;
+                left: -20%;
+                top: 3%;
                 color: aliceblue;
+                font-weight: 700;
             }
         }
         .resto:hover{
@@ -236,7 +237,7 @@ main{
                     .imagen{
                         height: 100%;
                         width: 35%;
-                        background-image: url("../img/resta.jpg");
+                        background-image: url("../img/restaurante.jpg");
                         background-size: cover;
                         border-radius: 7% 0 0 7%;
                         .distancia{
