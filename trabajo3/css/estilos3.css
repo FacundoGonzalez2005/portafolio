@@ -1,0 +1,325 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box; text-decoration: none;
+}
+ 
+.pa{
+    position: absolute;
+}
+
+.pr{
+    position: relative;
+}
+
+.centgrid{
+    /* sirve para centrar solo un elemento */
+    display: grid;
+    place-items: center;
+}
+
+.centflex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex100{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pd25{
+    padding: 25px;
+}
+
+.sombra{
+    box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.5);
+}
+
+.img_fit{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.radius{
+    border-radius: 100%;
+}
+
+.volver{
+    font-size: 30px;
+    left: 15px;
+    top: 15px;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.452);
+    border-radius: 50%;
+    backdrop-filter: blur(2px);
+    color: black;
+}
+
+.resto_image{
+    height: 40%;
+    width: 100%; 
+}
+
+
+.tag{
+    height: 40px;
+    width: auto;
+    background-color: rgb(0, 219, 153);
+    right: 15px;
+    bottom: -10px;
+    border-radius: 8px 0;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.resto_desc{
+    height: fit-content;
+    min-height: 60%;
+    width: 100%;
+    padding: 15px;
+    padding-top: 30px;
+    padding-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    span{
+        color: gray;
+    }
+    .iconos{
+        span:nth-child(1){
+            color: rgb(0, 219, 153);
+        }
+        span:nth-child(2){
+            color: rgb(0, 219, 153);
+        }
+        span:nth-child(3){
+            color: rgba(128, 128, 128, 0.505);
+        }
+    }
+}
+
+.resto_menu{
+    position: fixed; /* lo que hace es que fija una clase en la posiscion que vos quieras */
+    bottom: 0; /* ejemplo del fixed */
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.btn_menu{
+    flex: 1;
+    text-decoration: none;
+    font-weight: bold;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.btn_menu.active{
+    border-top: solid 4px aquamarine;
+}
+
+.titulo_menu{
+    height: 60px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.subtitulo_menu{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    color: gray;
+    h2{
+        padding-bottom: 6px;
+        margin-top: 6px;
+        border-bottom: solid 4px aquamarine;
+    }
+}
+
+.resto_titulo{
+    h2{
+        font-size: 25px;
+    }
+    h4{
+        color: gray;
+        padding-top: 15px;
+    }
+}
+
+.contenedor_tarjetas{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    padding-bottom: 75px;
+
+    .tarjeta{
+        display: flex;
+        flex: 1;        
+        height: 70px;
+    }
+
+    .foto{
+        height: 200px;
+        width: 100%;
+        background-size: 100% 100%;
+        border-radius: 50%;
+    }
+
+    .plato_desc{
+        height: 100%;
+        overflow: hidden;
+        /* white-space: nowrap;
+        text-overflow: ellipsis; */
+        h3{
+            padding-bottom: 20%;
+            color: black;
+        }
+        p{
+            color: gray;
+        }
+    }
+
+    .resena{
+        height: 100%;
+        overflow: hidden;
+        /* white-space: nowrap;
+        text-overflow: ellipsis; */
+        h3{
+            font-size: 21px;
+            color: black;
+            padding-bottom: 5px;
+        }
+        h4{
+            color: black;
+            font-size: 20px;
+            padding-bottom: 10px;
+        }
+        p{
+            font-size: 18px;
+            color: gray;
+        }
+    }
+}
+
+.info{
+    span{
+        cursor: pointer;
+    }
+    .iconos{
+        display: flex;
+        width: 100%;
+        margin: 10px;
+        font-size: 30px;
+        justify-content: space-around;
+        span:nth-child(1) {
+            color: orange;
+        }
+        span:nth-child(2) {
+            color: rgb(145, 101, 19);
+        }
+        span:nth-child(3) {
+            color: pink;
+        }
+    }
+    .texto{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin: 10px;
+        span{
+            color: gray;
+        }
+    }
+}
+
+@media (orientation: landscape){
+    .resto_image{
+        display: grid;
+        justify-content: center;
+        height: 10%;
+        width: 100%; 
+    }
+
+    .contenedor_tarjetas{
+        height: 1100px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        .tarjeta{
+            flex: 0 0 calc(50% - 10px);      
+            height: 300px;
+            .resena{
+                height: 100%;
+                overflow: hidden;
+                /* white-space: nowrap;
+                text-overflow: ellipsis; */
+                h3{
+                    font-size: 50px;
+                    color: black;
+                    padding-bottom: 30px;
+                }
+                h4{
+                    color: black;
+                    font-size: 30px;
+                    padding-bottom: 30px;
+                }
+                p{
+                    font-size: 25px;
+                    color: gray;
+                }
+            }
+        }
+        .foto{
+            height: auto;
+            width: 50%;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+        .plato_desc{
+            h3{
+                color: black;
+                font-size: 40px;
+            }
+            p{
+                font-size: 20px;
+                color: gray;
+            }
+        }
+}
+
+    .resto_precio{
+        height: 40px;
+        width: auto;
+        background-color: aqua;
+        right: 25px;
+        bottom: 0px;
+        border-radius: 8px 0;
+        padding: 8px;
+        font-weight: 700;
+        color: white;
+    }
+    .tag{
+        height: auto;
+        width: auto;
+        background-color: aquamarine;
+        right: 10px;
+        bottom:-12px;
+        border-radius: 8px 0;
+        padding: 8px;
+        font-weight: 700;
+        font-size: 30px;
+        color: white;
+    }
+
+}

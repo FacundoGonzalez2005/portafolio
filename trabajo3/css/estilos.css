@@ -1,0 +1,307 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header{
+    height: 70%;
+    width: 100%;
+
+    .portada{
+        height: 70%;
+        width: 100%;
+        background-color: blueviolet;
+        position: relative;
+
+        .imagen-resto{
+            height: 100%;
+            width: 100%;
+            background-image: url(../img/resta.jpg);
+            background-size: 100% 100%;
+            object-fit: cover;
+        }
+
+        .saludo{
+            position: absolute;
+            bottom: 60px;
+            left: 5%;
+            height: 100px;
+            width: 100%;
+            color: aliceblue;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            b{
+                font-size: 20px;
+            }
+            p{
+                color: rgba(240, 248, 255, 0.699);
+            }
+        }
+
+        .buscador{
+            position: absolute;
+            height: 40px;
+            width: 90%;
+            left: 5%;
+            background-color: azure;
+            bottom: -20px;
+            display: flex;
+
+            .ubicacion{
+                display: flex;
+                height: 40px;
+                width: 40px;
+                background-color: aquamarine;
+                font-size: 28px;
+                justify-content: center;
+                align-items: center;
+                color: white;
+            }
+
+            input[type=search]{
+                height: 40px;
+                width: calc(100% - 80px);
+                border: 0px white;
+                border: 0;
+                padding: 0 10px;
+            }
+
+            input[type=submit]{
+                height: 40px;
+                width: 40px;
+                border: 0 gray;
+                cursor: pointer;
+                color: gray;
+            }
+        }
+    }
+
+    .categorias{
+        padding-top: 5%;
+        height: 20%;
+        width: 100%;
+        display: flex;
+        overflow-y:scroll;
+        & .comida{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 5%;
+            cursor: pointer;
+            
+        }
+        & i{
+            font-size: 30px;
+        }
+        & .comida:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            color: red;
+        }
+    }
+}
+
+main{
+    height: 30% auto; /*/ pone auto para ampliarse automaticamente*/
+    width: 100%;
+    padding: 10px;
+
+    .resultados{
+        background-color: white;
+        display: flex;
+        flex-direction: column;  /*/para que este uno debajo del otro*/
+        gap: 20px;
+        font-size: 30pt;
+        
+        .resto{
+            position: relative;
+            display: flex;
+            height: 190px;
+            width: 100%;
+            color: white;
+            flex-direction: row;
+
+            .imagen{
+                position: absolute;
+                display: flex;
+                height: 100%;
+                width: 50%;
+                background-color: aqua;
+                border-radius: 10px 0 0 10px;
+                background-image: url(../img/restaurante.jpg);
+                background-size: cover;
+                left: 0;
+            }
+            .datos{
+                position: absolute;
+                display: flex;
+                height: 100%;
+                width: 60%;
+                background-color: rgb(112, 211, 102);
+                font-size: 20px;
+                border-radius: 0 0 0 20px;
+                right: 0;
+                padding: 10px;
+                .texto{
+                    display: flex;
+                    height: 95%;
+                    width: 100%;
+                    padding: 10px;
+                    gap:15px;
+                    flex-direction: column;
+
+                    .caja{
+                        display: flex;
+                        height: auto;
+                        width: 100%;
+                        justify-content: space-between;
+                        .plata{
+                            display: flex;
+                            i:nth-child(1){
+                                color: red;
+                            }
+                            i:nth-child(2){
+                                color: red;
+                            }
+                        }
+                        .estrellas{
+                            display: flex;
+                            span{
+                                color: red;
+                            }
+                            span:nth-child(5){
+                                color: gray;
+                            }
+                        }
+                    }
+                }
+            }
+            .puntuacion{
+                position: absolute;
+                background-color: blueviolet;
+                right: -10px;
+                top: -10px;
+                font-size: 25px;
+                border-radius: 15px 0 15px 0;
+                padding: 5px;
+            }
+            .distancia{
+                position: absolute;
+                left: -20%;
+                top: 3%;
+                color: aliceblue;
+                font-weight: 700;
+            }
+        }
+        .resto:hover{
+            transition: all 0.2s ease-in-out;
+            transform: scale(1.02);
+
+        }
+    }
+}
+
+/*/ sirve para adaptarse al momento que detecte el cambio de tamaño de pantalla, usamos las etiquetas y clases que queremos que cambie*/
+@media (orientation: landscape){
+    header{
+        height: 50%;
+        .categorias{
+            overflow-y: hidden;
+        }
+    }
+    main{
+        .resultados{
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: relative;
+            .resto{
+                /*/ flex-grow: 0; capacidad de agradar si hay espacio en el contenedero padre*/
+                /*/ flex-shrink: 0; es la capacidad de achicarse y poner columna en el 1*/
+                /*/ flex-basis: 50%; */
+                flex: 0 0 calc(50% - 10px); /*/estamos haciendo que el flex carcule el tamaño para que se adapte*/
+                display: flex;
+                padding: 10px;
+                .tarjeta{
+                    width: 150%;
+                    cursor: pointer;
+                    padding: 10px;  
+                    background-color: chocolate;
+                    display: flex;
+                    position: relative;
+                    .imagen{
+                        height: 100%;
+                        width: 35%;
+                        background-image: url("../img/restaurante.jpg");
+                        background-size: cover;
+                        border-radius: 7% 0 0 7%;
+                        .distancia{
+                            position: absolute;
+                            font-size: 15px;
+                            right: 13%;
+                            top: 10%;
+                        }
+                    }
+                    .texto{
+                        padding-left: 1.5%;
+                        padding-top: 0.6%;
+                        background-color: palegoldenrod;
+                        height: 40%;
+                        width: 32%;
+                        left: 16%;
+                        font-size: 15px;
+                        border-radius: 0 0 10px 10px;
+                        h2{
+                            padding-bottom: 1%;
+                        }
+                        .puntuaciones{
+                            display: flex;
+                            height: auto;
+                            width: 100%;
+                            flex-wrap: wrap;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            margin-top: 5%;
+                            .estrellas{
+                                .fa-solid{
+                                    color: red;
+                                }
+                            }
+                            .precio{  
+                                padding-right: 5%;                       
+                                i:nth-child(1){
+                                    color: red;
+                                }
+                                i:nth-child(2){
+                                    color: red;
+                                }
+                            }
+                        }
+                        
+                    }
+                    .puntuacion{
+                        height: 12%;
+                        width: 3%;
+                        position: absolute;
+                        left: 46%;
+                        top: 1%;
+                        background-color: aqua;
+                        border-radius: 10px 0 10px 0;
+                        font-size: 20px;
+                        text-align: center;
+                        padding-top: 0.5%;
+                    }
+                }
+            }
+        }
+    }
+    
+}
