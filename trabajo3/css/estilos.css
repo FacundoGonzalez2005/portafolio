@@ -134,10 +134,9 @@ main{
                 position: absolute;
                 display: flex;
                 height: 100%;
-                width: 50%;
+                width: 65%;
                 background-color: aqua;
                 border-radius: 10px 0 0 10px;
-                background-image: url(../img/restaurante.jpg);
                 background-size: cover;
                 left: 0;
             }
@@ -213,9 +212,10 @@ main{
 /*/ sirve para adaptarse al momento que detecte el cambio de tamaño de pantalla, usamos las etiquetas y clases que queremos que cambie*/
 @media (orientation: landscape){
     header{
-        height: 50%;
+        height: 120%;
+        position: relative;
         .categorias{
-            overflow-y: hidden;
+            position: absolute;
         }
     }
     main{

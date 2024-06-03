@@ -213,7 +213,7 @@ main{
 /*/ sirve para adaptarse al momento que detecte el cambio de tamaño de pantalla, usamos las etiquetas y clases que queremos que cambie*/
 @media (orientation: landscape){
     header{
-        height: 180%;
+        height: 120%;
         position: relative;
         .categorias{
             position: absolute;

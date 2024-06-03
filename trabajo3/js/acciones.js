@@ -21,17 +21,17 @@ console.log("conectado")
 // // APUNTE 2
 // //--------crear LISTA-------------
 
-let nuevaLista = document.createElement("ul")
+// let nuevaLista = document.createElement("ul")
 
-document.body.appendChild(nuevaLista)
+// document.body.appendChild(nuevaLista)
 
-let listaElemento1 = document.createElement("li");
-listaElemento1.textContent = "Primer Item Lista";
-nuevaLista.appendChild(listaElemento1)
+// let listaElemento1 = document.createElement("li");
+// listaElemento1.textContent = "Primer Item Lista";
+// nuevaLista.appendChild(listaElemento1)
 
-let listaElemento2 = document.createElement("li");
-listaElemento2.textContent = "Segundo Item Lista";
-nuevaLista.appendChild(listaElemento2)
+// let listaElemento2 = document.createElement("li");
+// listaElemento2.textContent = "Segundo Item Lista";
+// nuevaLista.appendChild(listaElemento2)
 
 //-----------------------
 
