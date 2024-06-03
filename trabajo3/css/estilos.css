@@ -135,7 +135,7 @@ main{
                 position: absolute;
                 display: flex;
                 height: 100%;
-                width: 65%;
+                width: 67%;
                 background-color: aqua;
                 border-radius: 10px 0 0 10px;
                 background-size: cover;
@@ -196,7 +196,7 @@ main{
             }
             .distancia{
                 position: absolute;
-                left: -20%;
+                left: -16%;
                 top: 3%;
                 color: aliceblue;
                 font-weight: 700;
@@ -299,9 +299,9 @@ main{
                 flex-direction: column;
                 justify-content: space-around;
                 cursor: pointer;
-            }
-            & i{
-                font-size: 30px;
+                & p{
+                    padding-top: 10%;
+                }
             }
             & .comida:hover{
                 cursor: pointer;
@@ -333,7 +333,6 @@ main{
                     .imagen{
                         height: 100%;
                         width: 35%;
-                        background-image: url("../img/restaurante.jpg");
                         background-size: cover;
                         border-radius: 7% 0 0 7%;
                         .distancia{
