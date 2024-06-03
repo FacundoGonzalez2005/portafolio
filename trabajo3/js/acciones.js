@@ -42,7 +42,7 @@ let futer = document.querySelector("footer")
 // futer.innerHTML = "<i>ALGO</i>"
 
 let resta = document.getElementById("restar")
-let cont = document.getElementById("contador")
+let cont = document.getElementById("Contador")
 let suma = document.getElementById("sumar")
 let counter = 1
 
@@ -50,19 +50,23 @@ cont.innerHTML = counter
 
 function Suma(){
     if (counter < 5){
-        resta.style.cursor = "black";
-        resta.style.cursor = "pointer";
+        suma.style.color = "white";
+        resta.style.color = "white";
+        suma.style.cursor = "black";
+        suma.style.cursor = "pointer";
         counter = counter + 1;
         cont.innerHTML = counter;        
     }
     else{
-            resta.style.color = "red";
-            resta.style.cursor = "not-allowed";
+            suma.style.color = "red";
+            suma.style.cursor = "not-allowed";
     }
 }
 
 function Resta(){
     if( counter > 1 ){
+        suma.style.color = "white";
+        resta.style.color = "white";
         counter = counter - 1;
         cont.innerHTML = counter;
     }

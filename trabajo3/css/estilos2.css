@@ -73,8 +73,27 @@
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 25px;
+        font-size: 30px;
         cursor: pointer;
+        button#restar{
+            height: 100px;
+            width: 100px;
+            border: 0;
+            font-size: 25px;
+            text-decoration: none;
+            background-color: rgb(112, 211, 102);
+            color: white;
+        }
+        button#sumar{
+            height: 100px;
+            width: 100px;
+            border: 0;
+            font-size: 25px;
+            text-decoration: none;
+            background-color: rgb(112, 211, 102);
+            color: white;
+            cursor: pointer;
+        }
     }
     .carrito{
         display: flex;
@@ -147,6 +166,26 @@
     .boton{
         .contador{
             font-size: 40px;
+            button#restar{
+                height: 100px;
+                width: 100px;
+                border: 0;
+                font-size: 40px;
+                text-decoration: none;
+                background-color: rgb(112, 211, 102);
+                color: white;
+                cursor: pointer;
+            }
+            button#sumar{
+                height: 100px;
+                width: 100px;
+                border: 0;
+                font-size: 40px;
+                text-decoration: none;
+                background-color: rgb(112, 211, 102);
+                color: white;
+                cursor: pointer;
+            }
         }
         .carrito{
             font-size: 30px;

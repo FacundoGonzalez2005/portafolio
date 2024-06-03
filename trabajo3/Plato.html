@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../trabajo2/css/estilos2.css">
+    <link rel="stylesheet" href="../trabajo3/css/estilos2.css">
     <link rel="stylesheet" href="css/material-icons.css">
     <title>Carta</title>
 </head>
@@ -28,11 +28,14 @@
         </article>
         <article class="boton">
             <div class="contador">
-                - 2 +
+                <button id="restar" onclick="Resta()">-</button>
+                <p id="Contador">8</p>
+                <button id="sumar" onclick="Suma()">+</button>
             </div>
             <div class="carrito">
                 ADD TO CART
             </div>
+            <script src="js/acciones.js"></script>
         </article>
     </section>
 </body>
