@@ -44,8 +44,8 @@
       "twitter_handle": "komasliders",
       "direccion": "Mar del Plata 8823, Tortuguitas",
       "horario": "9.00 - 15.00hs",
-      "puntuacion": "star star star star",
-      "rango": "3"
+      "puntuacion": "2",
+      "rango": "1"
     },
     {
       "truck_id": "91",
@@ -64,7 +64,7 @@
       "twitter_handle": "",
       "direccion": "Sarratea 583, Villa de Mayo",
       "horario": "12.00 - 23.00hs",
-      "puntuacion": "star star",
+      "puntuacion": "2",
       "rango": "2"
     },
     {
@@ -88,7 +88,7 @@
       "twitter_handle": "RSPizzaQLD",
       "direccion": "Colonia Carolla, Córdoba",
       "horario": "11.00 - 02.00hs",
-      "puntuacion": "star star person",
+      "puntuacion": "2",
       "rango": "3"
     },
     {

@@ -5,8 +5,39 @@ fetch('js/restaurantes.json')
      return response.json()
     })
 .then(data => {
-      for (let i=0; i < 10; i++){
-       
+      for (let i=0; i < 2; i++){
+       let puntu = ""
+       let rango = ""
+       if (data[i].puntuacion === "4"){
+            puntu = "star star star star"
+        }
+        else if (data[i].puntuacion === "3"){
+            puntu = "star star star"
+        }
+        else if (data[i].puntuacion === "2"){
+            puntu = "star star"
+        }
+        else if (data[i].puntuacion === "1"){
+            puntu = "star"
+        }
+        else{
+            puntu = "person"
+        }
+
+        if (data[i].rango === "4"){
+            rango = "attach_money attach_money attach_money attach_money"
+        }
+        else if (data[i].rango === "3"){
+            rango = "attach_money attach_money attach_money"
+        }
+        else if (data[i].rango === "2"){
+            rango = "attach_money attach_money"
+        }
+        else{
+            rango = "attach_money"
+        }
+
+
          document.querySelector('.resultados').innerHTML +=
          /*html*/`<a href="resto.html" class="resto">
             <div class="imagen"><img class="imagen" src=${data[i].avatar.src} alt=""></div>
@@ -17,16 +48,10 @@ fetch('js/restaurantes.json')
                     <p>${data[i].horario}</p>
                     <div class="caja">
                         <div class="estrellas">
-                            <span class="iconos">star</span>
-                            <span class="iconos">star</span>
-                            <span class="iconos">star</span>
-                            <span class="iconos">star</span>
-                            <span class="iconos">star</span>
+                            <span class="iconos">${puntu}</span>
                         </div>
                         <div class="plata">
-                            <i class="fa-solid fa-euro-sign"></i>
-                            <i class="fa-solid fa-euro-sign"></i>
-                            <i class="fa-solid fa-euro-sign"></i>
+                             <span class="iconos">${rango}</span>
                         </div>
                     </div>
                     <div class="puntuacion">
