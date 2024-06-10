@@ -320,7 +320,7 @@ main{
             flex-wrap: wrap;
             position: relative;
                 .resto{
-                    height: 185px;
+                    height: 200px;
                     /*/ flex-grow: 0; capacidad de agradar si hay espacio en el contenedero padre*/
                     /*/ flex-shrink: 0; es la capacidad de achicarse y poner columna en el 1*/
                     /*/ flex-basis: 50%; */
