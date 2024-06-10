@@ -211,6 +211,31 @@ main{
     }
 }
 
+/*CONTENEDOR SCROLLBAR*/
+::-webkit-scrollbar {
+    height: 10px;
+    width: 5px;
+    border-radius: 5px;
+    }
+    
+    /* FONDO BARRA SCROLL*/
+    ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    }
+    
+    /* SELECTOR */
+    ::-webkit-scrollbar-thumb {
+    background: rgb(109, 223, 185);
+    ;
+    border-radius: 5px;
+    }
+    
+    /* SELECTOR hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: rgb(84, 171, 142);
+    ;
+    }
+
 /*/ sirve para adaptarse al momento que detecte el cambio de tamaño de pantalla, usamos las etiquetas y clases que queremos que cambie*/
 @media (orientation: landscape){
     header{
