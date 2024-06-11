@@ -260,6 +260,12 @@
 }
 
 @media (orientation: landscape){
+    .resto_image{
+        display: grid;
+        justify-content: center;
+        height: 10%;
+        width: 100%; 
+    }
     .contenedor_tarjetas{
         display: flex;
         flex-direction: row;
@@ -318,11 +324,12 @@
     height: auto;
     width: auto;
     background-color: aquamarine;
-    right: -12%;
+    right: 10px;
     bottom:-12px;
     border-radius: 8px 0;
-    font-weight: 500;
-    font-size: 25px;
+    padding: 8px;
+    font-weight: 700;
+    font-size: 30px;
     color: white;
 }
 

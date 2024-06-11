@@ -140,7 +140,6 @@ main{
                 border-radius: 10px 0 0 10px;
                 background-size: cover;
                 left: 0;
-                background-image: url(../img/restaurante.jpg);
             }
             .datos{
                 position: absolute;
@@ -311,7 +310,7 @@ main{
         .categorias{
             padding-top: 0%;
             background-color: rgb(255, 255, 77);
-            height: 13%;
+            height: 17%;
             width: 100%;
             display: flex;
             overflow-x:scroll;
@@ -351,7 +350,16 @@ main{
                     /*/ flex-basis: 50%; */
                     flex: 0 0 calc(50% - 10px); /*/estamos haciendo que el flex carcule el tamaño para que se adapte*/
                     display: flex;
-                    padding: 10px;
+                    .imagen{
+                        background-color: rgb(255, 255, 1);
+                        position: absolute;
+                        display: flex;
+                        height: 100%;
+                        width: 65%;
+                        border-radius: 10px 0 0 10px;
+                        background-size: cover;
+                        left: 0%;
+                    }
                         .datos{
                             .texto{
                                 font-size: 23px;

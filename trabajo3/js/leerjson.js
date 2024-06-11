@@ -40,7 +40,7 @@ fetch('js/restaurantes.json')
 
          document.querySelector('.resultados').innerHTML +=
          /*html*/`<a href="resto.html" class="resto">
-            <div class="imagen"><img class="plato" src=${data[i].avatar.src} alt=""></div>
+            <div class="imagen"><img class="imagen" src=${data[i].avatar.src} alt=""></div>
             <div class="datos">
                 <div class="texto">
                     <h4>${data[i].name}</h4>
