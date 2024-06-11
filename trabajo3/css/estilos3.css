@@ -260,84 +260,70 @@
 }
 
 @media (orientation: landscape){
-    .resto_image{
-        display: grid;
-        justify-content: center;
-        height: 10%;
-        width: 100%; 
-    }
-
     .contenedor_tarjetas{
-        height: 1100px;
-        width: 100%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         position: relative;
+        gap: 20px;
         .tarjeta{
-            flex: 0 0 calc(50% - 10px);      
-            height: 300px;
+            background-color: orange;
+            height: 130px;
+            flex: 0 0 calc(50% - 10px); 
+            .foto{
+                display: flex;
+                background-color: rgb(255, 255, 103);
+                min-height: auto;
+                width: 50%;
+                border-radius: 5px;
+                .imagen{
+                    padding: 0 8% 0 8%;
+                }
+            }
+            .plato_desc{
+                border-radius: 0;
+                h3{
+                    color: black;
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 20px;
+                    color: gray;
+                }
+            }   
             .resena{
                 height: 100%;
                 overflow: hidden;
                 /* white-space: nowrap;
                 text-overflow: ellipsis; */
                 h3{
-                    font-size: 50px;
+                    font-size: 25px;
                     color: black;
-                    padding-bottom: 30px;
+                    padding-bottom: 5px;
                 }
                 h4{
                     color: black;
-                    font-size: 30px;
-                    padding-bottom: 30px;
+                    font-size: 20px;
+                    padding-bottom: 5px;
                 }
                 p{
-                    font-size: 25px;
+                    font-size: 20px;
                     color: gray;
                 }
             }
         }
-        .foto{
-            height: auto;
-            width: 50%;
-            object-fit: cover;
-            border-radius: 100%;
-        }
-        .plato_desc{
-            h3{
-                color: black;
-                font-size: 40px;
-            }
-            p{
-                font-size: 20px;
-                color: gray;
-            }
-        }
 }
 
-    .resto_precio{
-        height: 40px;
-        width: auto;
-        background-color: aqua;
-        right: 25px;
-        bottom: 0px;
-        border-radius: 8px 0;
-        padding: 8px;
-        font-weight: 700;
-        color: white;
-    }
-    .tag{
-        height: auto;
-        width: auto;
-        background-color: aquamarine;
-        right: 10px;
-        bottom:-12px;
-        border-radius: 8px 0;
-        padding: 8px;
-        font-weight: 700;
-        font-size: 30px;
-        color: white;
-    }
+.tag{
+    height: auto;
+    width: auto;
+    background-color: aquamarine;
+    right: -12%;
+    bottom:-12px;
+    border-radius: 8px 0;
+    font-weight: 500;
+    font-size: 25px;
+    color: white;
+}
 
 }
