@@ -57,23 +57,24 @@
     color: black;
 }
 
-.resto_image{
-    height: 40%;
-    width: 100%; 
+
+.imagen{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
-
 .tag{
-    height: 40px;
+    height: auto;
     width: auto;
+    padding: 3px;
     background-color: rgb(0, 219, 153);
-    right: 15px;
-    bottom: -10px;
     border-radius: 8px 0;
-    padding: 8px;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 500;
     color: white;
+    right: -14%;
+    bottom: -10%;
 }
 
 .resto_desc{
@@ -141,6 +142,7 @@
         padding-bottom: 6px;
         margin-top: 6px;
         border-bottom: solid 4px aquamarine;
+        font-size: 20px;
     }
 }
 
@@ -155,57 +157,75 @@
 }
 
 .contenedor_tarjetas{
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 15px;
-    padding-bottom: 75px;
-
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 20%;
     .tarjeta{
+        height: 100%;
+        width: 100%;
         display: flex;
         flex: 1;        
-        height: 70px;
-    }
-
-    .foto{
-        height: 200px;
-        width: 100%;
-        background-size: 100% 100%;
-        border-radius: 50%;
-    }
-
-    .plato_desc{
-        height: 100%;
-        overflow: hidden;
-        /* white-space: nowrap;
-        text-overflow: ellipsis; */
-        h3{
-            padding-bottom: 20%;
-            color: black;
+        box-shadow: 0 0 15px -3px;
+        border-radius: 5px;
+        .foto{
+            display: flex;
+            background-color: rgb(255, 255, 103);
+            min-height: auto;
+            width: 50%;
+            border-radius: 5px;
+            .imagen{
+                padding: 0 8% 0 8%;
+            }
         }
-        p{
-            color: gray;
+    
+        .plato_desc{
+            min-height: auto;
+            width: 100%;
+            overflow: hidden;
+            /* white-space: nowrap;
+            text-overflow: ellipsis; */
+            background-color: rgb(148, 255, 255);
+            border-radius: 5px;
+            padding-left: 6%;
+            h3{
+                color: black;
+                font-size: 18px;
+                padding-bottom: 3%;
+            }
+            p{
+                color: gray;
+                font-size: 13px;
+            }
         }
     }
-
     .resena{
         height: 100%;
+        width: 100%;
         overflow: hidden;
+        background-color: rgb(148, 255, 255);
+        padding-left: 6%;
+        border-radius: 5px;
         /* white-space: nowrap;
         text-overflow: ellipsis; */
         h3{
-            font-size: 21px;
+            font-size: 20px;
             color: black;
-            padding-bottom: 5px;
+            padding-bottom: 3px;
         }
         h4{
             color: black;
-            font-size: 20px;
-            padding-bottom: 10px;
+            font-size: 15px;
+            padding-bottom: 3px;
         }
         p{
-            font-size: 18px;
+            font-size: 12px;
             color: gray;
+            padding-bottom: 3px;
         }
     }
 }
@@ -217,7 +237,6 @@
     .iconos{
         display: flex;
         width: 100%;
-        margin: 10px;
         font-size: 30px;
         justify-content: space-around;
         span:nth-child(1) {
@@ -234,7 +253,6 @@
         display: flex;
         width: 100%;
         justify-content: space-around;
-        margin: 10px;
         span{
             color: gray;
         }

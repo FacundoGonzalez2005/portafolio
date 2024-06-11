@@ -5,7 +5,7 @@ fetch('js/restaurantes.json')
      return response.json()
     })
 .then(data => {
-      for (let i=0; i < 7; i++){
+      for (let i=0; i < 4; i++){
        let puntu = ""
        let rango = ""
        if (data[i].puntuacion === "4"){
@@ -40,7 +40,7 @@ fetch('js/restaurantes.json')
 
          document.querySelector('.resultados').innerHTML +=
          /*html*/`<a href="resto.html" class="resto">
-            <div class="imagen"><img class="imagen" src=${data[i].avatar.src} alt=""></div>
+            <div class="imagen"><img class="plato" src=${data[i].avatar.src} alt=""></div>
             <div class="datos">
                 <div class="texto">
                     <h4>${data[i].name}</h4>
@@ -68,3 +68,26 @@ fetch('js/restaurantes.json')
 })
 
 
+let info = document.querySelector(".contenedor_tarjetas")
+
+fetch('js/platos_peruanos.json')
+.then(response => {
+     return response.json()
+    })
+.then(data => {
+      for (let i=0; i < 7; i++){
+
+         document.querySelector('.contenedor_tarjetas').innerHTML +=
+         /*html*/`<a href="Plato.html" class="tarjeta">
+            <div class="foto pr">
+                <img src=${data[i].image} alt=""class="imagen radius">
+                <div class="tag pa sombra">$${data[i].price}</div>
+            </div>
+            <div class="plato_desc">
+                <h3>${data[i].plato}</h3>
+                <p>${data[i].description}</p>
+            </div>
+        </a>` 
+       
+    }
+})
