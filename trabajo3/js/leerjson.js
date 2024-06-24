@@ -91,3 +91,32 @@ fetch('js/platos_peruanos.json')
        
     }
 })
+
+
+let opinion = document.querySelector(".contenedor_tarjetas2")
+
+fetch('js/reseñas_peruanos.json')
+
+.then(response => {
+     return response.json()
+    })
+.then(data => {
+      for (let i=0; i < 7; i++){
+
+         document.querySelector('.contenedor_tarjetas2').innerHTML +=
+         /*html*/`<article class="tarjeta">
+            <div class="foto pr">
+                <img src=${data[i].img} alt="" class="imagen radius">
+                <div class="tag pa sombra">${data[i].calificacion} <i class="iconos">star</i></div>
+            </div>
+            <div class="resena">
+                <h3>${data[i].nombre}</h3>
+                <h4>-${data[i].plato}</h4>
+                <p>${data[i].description}</p>
+            </div>
+        </article>` 
+       
+    }
+})
+
+
