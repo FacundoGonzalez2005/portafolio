@@ -5,7 +5,7 @@ fetch('js/restaurantes.json')
      return response.json()
     })
 .then(data => {
-      for (let i=0; i < 4; i++){
+      for (let i=0; i < 3; i++){
        let puntu = ""
        let rango = ""
        if (data[i].puntuacion === "4"){
