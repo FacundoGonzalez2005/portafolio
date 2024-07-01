@@ -12,13 +12,16 @@ fetch("js/restaurantes.json")
     // });
       // almaceno en la variable restaurante el valor de i del FOR
       let restaurante = data[i];
-
+      console.log(restaurante)
       let cartaRestaurante = document.createElement("a");
+      cartaRestaurante.setAttribute("id",restaurante.truck_id);
+      cartaRestaurante.setAttribute("href","resto.html");
+      cartaRestaurante.setAttribute("onClick","guardarid(id)")
       cartaRestaurante.classList.add("resto");
       // almaceno en la variable cartaRestaurante.id el valor de i del restaurante.truck_id
       cartaRestaurante.id = restaurante.truck_id;
       cartaRestaurante.innerHTML = /*html*/ `
-        <a href="resto.html" class="resto">
+        <div class="resto">
             <div class="imagen"><img class="imagen" src=${restaurante.avatar.src} alt=""></div>
             <div class="datos">
                 <div class="texto">
@@ -41,7 +44,7 @@ fetch("js/restaurantes.json")
                     </div>
                 </div>
             </div>
-        </a>
+        </div>
 
         `;
 
