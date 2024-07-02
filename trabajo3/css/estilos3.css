@@ -81,12 +81,16 @@
     height: fit-content;
     min-height: 60%;
     width: 100%;
-    padding: 15px;
-    padding-top: 30px;
     padding-bottom: 75px;
     display: flex;
     flex-direction: column;
     gap:20px;
+    .titulo_menu{
+        height: 60px;
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
     span{
         color: gray;
     }
@@ -101,6 +105,7 @@
             color: rgba(128, 128, 128, 0.505);
         }
     }
+    
 }
 
 .resto_menu{
@@ -124,13 +129,6 @@
 
 .btn_menu.active{
     border-top: solid 4px aquamarine;
-}
-
-.titulo_menu{
-    height: 60px;
-    width: 100%;
-    display: grid;
-    place-items: center;
 }
 
 .subtitulo_menu{

@@ -21,7 +21,6 @@ fetch("js/restaurantes.json")
       // almaceno en la variable cartaRestaurante.id el valor de i del restaurante.truck_id
       cartaRestaurante.id = restaurante.truck_id;
       cartaRestaurante.innerHTML = /*html*/ `
-        <div class="resto">
             <div class="imagen"><img class="imagen" src=${restaurante.avatar.src} alt=""></div>
             <div class="datos">
                 <div class="texto">
@@ -44,7 +43,6 @@ fetch("js/restaurantes.json")
                     </div>
                 </div>
             </div>
-        </div>
 
         `;
 
