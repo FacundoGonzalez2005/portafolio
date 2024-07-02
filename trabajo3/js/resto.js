@@ -10,7 +10,7 @@ fetch("js/restaurantes.json")
     data.forEach(plato => {
         if( plato.truck_id == localStorage.getItem("indiceCache")){
             resto.innerHTML += `
-            <section class="resto_image pr ">
+            <section class="resto_image">
             <a href="index.html" class="volver iconos pa">close</a>
             <img class="img_fit" src="${plato.avatar.src}" alt="">
             <div class="tag pa centgrid sombra">4.8</div>

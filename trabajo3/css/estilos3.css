@@ -289,10 +289,19 @@
 
 @media (orientation: landscape){
     .resto_image{
-        display: grid;
+        display: flex;
         justify-content: center;
-        height: 10%;
-        width: 100%; 
+        align-items: center;
+        height: 50%;
+        width: 50%; 
+        img_fit{
+            display: flex;
+            height: 50%;
+            width: 50%; 
+            object-fit: cover;
+            justify-content: center;
+            align-items: center;
+        }
     }
     .contenedor_tarjetas{
         display: flex;
