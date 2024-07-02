@@ -12,7 +12,7 @@ fetch("js/restaurantes.json")
             resto.innerHTML += `
             <section class="resto_image">
             <a href="index.html" class="volver iconos pa">close</a>
-            <img class="img_fit" src="${plato.avatar.src}" alt="">
+            <img class="img_fit" src=${plato.avatar.src} alt="">
             <div class="tag pa centgrid sombra">4.8</div>
         </section>
         <div class="flex100">
@@ -32,13 +32,7 @@ fetch("js/restaurantes.json")
                 <span>10AM-10PM</span><span>1.6KM</span><span>DELIVERY</span>
             </div>
         </section>
-        <span>${plato.bio}</span>
-            
-            
-            
-            `
-
-
+        <span>${plato.bio}</span> `
         }
     });
 })

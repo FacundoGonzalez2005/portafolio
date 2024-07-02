@@ -146,74 +146,108 @@
       },
       "menu":[
         {
-          "nombre": "Juan Perez",
-          "calificacion": "4",
           "plato": "Ceviche",
-          "img": "https://randomuser.me/api/portraits/men/6.jpg",
-          "description": "A popular Peruvian seafood dish"
+          "description": "Fresh fish marinated in lime juice, mixed with onions, cilantro, and rocoto peppers.",
+          "price": "15.99",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/CEVICHE_DE_CAMAR%C3%93N_ECUATORIANO.jpg/800px-CEVICHE_DE_CAMAR%C3%93N_ECUATORIANO.jpg",
+          "rate": "4.5",
+          "time": "20",
+          "ingredients": "Fish, lime juice, onions, cilantro, rocoto peppers",
+          "take_away": "true",
+          "vegan": "false",
+          "kcal": "250",
+          "glutenfree": "true"
         },
         {
-          "nombre": "Maria Rodriguez",
-          "calificacion": "5",
           "plato": "Lomo Saltado",
-          "img": "https://randomuser.me/api/portraits/women/42.jpg",
-          "description": "A traditional Peruvian stir-fry dish"
+          "description": "Stir-fried beef with onions, tomatoes, and french fries, served with rice.",
+          "price": "18.99",
+          "image": "https://static01.nyt.com/images/2023/11/08/multimedia/CR-lomo-saltado-zfwg/CR-lomo-saltado-zfwg-superJumbo.jpg",
+          "rate": "4.2",
+          "time": "25",
+          "ingredients": "Beef, onions, tomatoes, french fries, rice",
+          "take_away": "true",
+          "vegan": "false",
+          "kcal": "450",
+          "glutenfree": "false"
         },
         {
-          "nombre": "Carlos Gutierrez",
-          "calificacion": "3",
           "plato": "Aji de Gallina",
-          "img": "https://randomuser.me/api/portraits/men/48.jpg",
-          "description": "A creamy Peruvian chicken dish"
+          "description": "Shredded chicken in a creamy yellow chili pepper sauce, served with boiled potatoes and rice.",
+          "price": "14.99",
+          "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/Aji-Gallina-web-570x458.jpg",
+          "rate": "4.7",
+          "time": "22",
+          "ingredients": "Chicken, yellow chili peppers, potatoes, rice",
+          "take_away": "true",
+          "vegan": "false",
+          "kcal": "380",
+          "glutenfree": "true"
         },
         {
-          "nombre": "Luisa Chavez",
-          "calificacion": "4",
-          "plato": "Causa Rellena",
-          "img": "https://randomuser.me/api/portraits/women/37.jpg",
-          "description": "A layered Peruvian potato dish"
-        },
-        {
-          "nombre": "Pedro Vasquez",
-          "calificacion": "5",
           "plato": "Anticuchos",
-          "img": "https://randomuser.me/api/portraits/men/68.jpg",
-          "description": "Grilled skewers of marinated meat"
+          "description": "Grilled skewers of marinated beef heart, served with roasted potatoes and aji sauce.",
+          "price": "12.99",
+          "image": "https://alimentosperueuropa.com/wp-content/uploads/2015/09/anticucho.jpg",
+          "rate": "4.3",
+          "time": "18",
+          "ingredients": "Beef heart, potatoes, aji sauce",
+          "take_away": "true",
+          "vegan": "false",
+          "kcal": "320",
+          "glutenfree": "true"
         },
         {
-          "nombre": "Ana Torres",
-          "calificacion": "4",
-          "plato": "Tiradito",
-          "img": "https://randomuser.me/api/portraits/women/50.jpg",
-          "description": "Similar to ceviche, but with thinly sliced fish"
+          "plato": "Causa Rellena",
+          "description": "Layers of seasoned mashed potatoes filled with chicken or tuna salad.",
+          "price": "10.99",
+          "image": "https://cdn0.recetasgratis.net/es/posts/8/6/2/causa_limena_31268_orig.jpg",
+          "rate": "4.6",
+          "time": "15",
+          "ingredients": "Potatoes, chicken or tuna salad",
+          "take_away": "true",
+          "vegan": "false",
+          "kcal": "280",
+          "glutenfree": "true"
         },
         {
-          "nombre": "Jorge Ramirez",
-          "calificacion": "3",
           "plato": "Rocoto Relleno",
-          "img": "https://randomuser.me/api/portraits/men/69.jpg",
-          "description": "Stuffed spicy Peruvian pepper"
+          "description": "Spicy rocoto peppers stuffed with seasoned ground beef and cheese, served with a side of rice.",
+          "price": "13.99",
+          "image": "https://cdn0.recetasgratis.net/es/posts/9/0/1/rocoto_relleno_arequipeno_75109_orig.jpg",
+          "rate": "4.4",
+          "time": "20",
+          "ingredients": "Rocoto peppers, ground beef, cheese, rice",
+          "take_away": "true",
+          "vegan": "false",
+          "kcal": "350",
+          "glutenfree": "true"
         },
         {
-          "nombre": "Fernanda Silva",
-          "calificacion": "5",
-          "plato": "Papa a la Huancaina",
-          "img": "https://randomuser.me/api/portraits/women/55.jpg",
-          "description": "Boiled potatoes in a spicy cheese sauce"
-        },
-        {
-          "nombre": "Ricardo Ortega",
-          "calificacion": "4",
           "plato": "Arroz con Mariscos",
-          "img": "https://randomuser.me/api/portraits/men/89.jpg",
-          "description": "Peruvian-style seafood rice"
+          "description": "Peruvian-style seafood fried rice with a mix of shrimp, fish, calamari, and mussels.",
+          "price": "16.99",
+          "image": "https://peru.info/archivos/publicacion/210-imagen-106565112021.jpg",
+          "rate": "4.8",
+          "time": "23",
+          "ingredients": "Shrimp, fish, calamari, mussels, rice",
+          "take_away": "true",
+          "vegan": "false",
+          "kcal": "420",
+          "glutenfree": "false"
         },
         {
-          "nombre": "Silvia Mendoza",
-          "calificacion": "5",
-          "plato": "Pollo a la Brasa",
-          "img": "https://randomuser.me/api/portraits/women/55.jpg",
-          "description": "Peruvian-style rotisserie chicken"
+          "plato": "Tallarin Saltado",
+          "description": "Stir-fried noodles with beef or chicken, onions, tomatoes, and soy sauce.",
+          "price": "14.99",
+          "image": "https://elcomercio.pe/resizer/bgEiRZpXexuVdTgHlyqRvqggBMM=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/3WTXO6B53BEWZCVKCEVYN5WHKI.jpg",
+          "rate": "4.1",
+          "time": "22",
+          "ingredients": "Noodles, beef or chicken, onions, tomatoes, soy sauce",
+          "take_away": "true",
+          "vegan": "false",
+          "kcal": "390",
+          "glutenfree": "false"
         }
       ],
       "website": "https://www.komasliders.com.au/",
