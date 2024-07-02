@@ -8,7 +8,7 @@ fetch("js/restaurantes.json")
     data.forEach(resta => {
       // almaceno en la variable restaurante el valor de i del FOR
     //   let restaurante = data[resta];
-      console.log(resta.menu)
+    //   console.log(resta.menu[0])
       let cartaRestaurante = document.createElement("a");
     //   cartaRestaurante.setAttribute("id",restaurante.truck_id);
       cartaRestaurante.setAttribute("href","Plato.html");
@@ -16,11 +16,11 @@ fetch("js/restaurantes.json")
       cartaRestaurante.classList.add("menu");
       // almaceno en la variable cartaRestaurante.id el valor de i del restaurante.truck_id
     //   cartaRestaurante.id = restaurante.truck_id;
-           for (let i = 0; i < 8; i++) {    
+           for (let i = 0; i < 3; i++) {    
             cartaRestaurante.innerHTML = /*html*/ `
             <a href="Plato.html" class="tarjeta">
             <div class="foto pr">
-                <img src="${resta.menu[i].image}" alt="" class="img_fit radius">
+                <img src="" alt="" class="img_fit radius">
                 <div class="tag pa sombra">${resta.menu[i].price}/div>
             </div>
             <div class="plato_desc pd25">
