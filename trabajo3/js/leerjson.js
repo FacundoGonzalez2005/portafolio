@@ -1,6 +1,6 @@
 let resto = document.querySelector(".resultados");
 
-fetch("js/restaurantes.json")
+fetch("json/restaurantes.json")
   .then((response) => {
     return response.json();
   })

@@ -2,7 +2,7 @@ let resto = document.querySelector(".resto_desc");
 console.log(localStorage.getItem("indiceCache"))
 
 
-fetch("js/restaurantes.json")
+fetch("json/restaurantes.json")
   .then((response) => {
     return response.json();
   })
@@ -36,3 +36,7 @@ fetch("js/restaurantes.json")
         }
     });
 })
+
+// obtengo desde la caché el valor almacenado en indiceCache
+console.log("con localstorage " + localStorage.getItem("indiceCache"));
+let k = localStorage.getItem("indiceCache");
