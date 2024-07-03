@@ -9,12 +9,11 @@ fetch("json/restaurantes.json")
       // almaceno en la variable restaurante el valor de i del FOR
       let cartaRestaurante = document.createElement("a");
       // almaceno en la variable cartaRestaurante.id el valor de i del restaurante.truck_id
-      
-      if (plato.truck_id == localStorage.getItem("indiceCache")) {
+          if (plato.truck_id == localStorage.getItem("indiceCache")) {
         for (let x = 0; x < plato.menu.length; x++) {
           menu.innerHTML += /*html*/ `
-                <a href="Plato.html" class="tarjeta">
-                  <div class="foto pr">
+                <a href="Plato.html" class="tarjeta" >
+                  <div class="foto pr" onclick="captura()">
                       <img src=${plato.menu[x].image} alt="" class="img_fit radius">
                       <div class="tag pa sombra">${plato.menu[x].price}</div>
                   </div>
@@ -26,9 +25,10 @@ fetch("json/restaurantes.json")
               `;
 
           cartaRestaurante.addEventListener("click", function () {
-                let idRestauranteSeleccionado = plato.menu.plato;
+                let idRestauranteSeleccionado2 = plato.menu[x].plato;
                 //almaceno en CACHÉ la variable indiceCache el valor de idRestauranteSeleccionado
                 localStorage.setItem("indiceCache", idRestauranteSeleccionado);
+                localStorage.setItem("indiceplato", idRestauranteSeleccionado2);
                 console.log(idRestauranteSeleccionado);
           });
         }
@@ -37,8 +37,8 @@ fetch("json/restaurantes.json")
   });
 
 // obtengo desde la caché el valor almacenado en indiceCache
-console.log("con localstorage " + localStorage.getItem("indiceCache"));
-let k = localStorage.getItem("indiceCache");
+console.log("con localstorage " + localStorage.getItem("indiceplato"));
+let k = localStorage.getItem("indiceplato");
 
 // fetch('json/restaurantes.json')
 //       .then(response => response.json())
