@@ -94,7 +94,7 @@ body{
     }
     .contenedor{
         display: flex;
-        height: 100%;
+        height: auto;
         width: 100%;
         flex-direction: column;  
         padding: 10px;
@@ -119,10 +119,14 @@ body{
                 .pastilla-imagen{
                     height: 100%;
                     width: 30%;
-                    background-image: url(../img/pastilla.avif);
                     border-radius: 50%;
-                    background-size: 100% 100%;
-                    background-position: 50% 50%;
+                    object-fit: cover;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
                 }
                 .pastilla-texto{
                     height: 100%;
