@@ -106,7 +106,7 @@ body{
             border-radius: 20px;
             flex-direction: column;
             overflow: hidden;
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(226, 222, 222);
             padding: 2%;
             .pastilla{
                 display: flex;
@@ -222,4 +222,145 @@ body{
 
 .transparent{
     color: transparent;
+}
+
+
+/*------------------ PÁGINA PASTILLA.HTML ------------------*/
+
+.pastilla-iconos{
+    display: flex;
+    height: 8%;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.pastilla-encabezado{
+    height: 30%;
+    width: 100%;
+    background-color: antiquewhite;
+    padding-top: 20px;
+    .pastilla-imagen{
+        height: 75%;
+        width: 100%;
+        background-image: url(../img/pastilla2.avif);
+        background-size: 70% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .pastilla-texto{
+        display: flex;
+        height: 25%;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.pastilla-tiempo{
+    display: flex;
+    height: 62%;
+    width: 100%;
+    padding: 15px;
+    flex-direction: column;
+    gap: 30px;
+    .pastilla-fila{
+        display: flex;
+        height: 15%;
+        width: 100%;
+        flex-direction: row;
+        background-color: antiquewhite;
+        .pastilla-duracion{
+            display: flex;
+            height: 100%;
+            width: 100%;
+            padding: 5px;
+            flex-direction: column;
+            span:nth-child(2){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 10px;
+                padding-left: 0;
+                i{
+                    padding-right: 20%;
+                    color: orange;
+                    font-size: 20px;
+                }
+            }
+        }
+        .pastilla-frecuencia{
+            display: flex;
+            height: 100%;
+            width: 100%;
+            padding: 5px;
+            flex-direction: column;
+            span:nth-child(2){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 10px;
+                padding-left: 0;
+                i{
+                    padding-right: 20%;
+                    color: orange;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .pastilla-recordatorio{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+        flex-direction: column;
+        padding: 0 10px 0 10px;
+        h3{
+            padding-bottom: 40px;
+        }
+        .pastilla-tarjeta{
+            height: auto;
+            width: 100%;
+            .pastilla-info{
+                height: auto;
+                width: 100%;
+                border-left: solid 5px orange;
+                padding-left: 8px;
+            }
+            .pastilla-fila-botones{
+                display: flex;
+                height: auto;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 10px 0;
+                .pastilla-boton1{
+                    display: flex;
+                    font-size: 13px;
+                    border: solid 1px white;
+                    color: blue;
+                    font-weight: 700;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                    padding: 10px;
+                }
+                .pastilla-boton2{
+                    display: flex;
+                    font-size: 12px;
+                    border: solid 1px blue;
+                    background-color: blue;
+                    font-weight: 700;
+                    color: white;
+                    align-items: center;
+                    border-radius: 12px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
 }
