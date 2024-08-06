@@ -239,7 +239,7 @@ body{
 .pastilla-encabezado{
     height: 30%;
     width: 100%;
-    background-color: antiquewhite;
+    background-color: rgb(238, 238, 238);
     padding-top: 20px;
     .pastilla-imagen{
         height: 75%;
@@ -271,19 +271,18 @@ body{
         height: 15%;
         width: 100%;
         flex-direction: row;
-        background-color: antiquewhite;
+        background-color: rgb(238, 238, 238);
+        padding-left: 0;
         .pastilla-duracion{
             display: flex;
             height: 100%;
             width: 100%;
             padding: 5px;
             flex-direction: column;
+            padding-left: 15px;
             span:nth-child(2){
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 padding-top: 10px;
-                padding-left: 0;
+                font-weight: 600;
                 i{
                     padding-right: 20%;
                     color: orange;
@@ -298,11 +297,8 @@ body{
             padding: 5px;
             flex-direction: column;
             span:nth-child(2){
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                font-weight: 600;
                 padding-top: 10px;
-                padding-left: 0;
                 i{
                     padding-right: 20%;
                     color: orange;
@@ -319,12 +315,15 @@ body{
         overflow-y: scroll;
         flex-direction: column;
         padding: 0 10px 0 10px;
+        gap: 15px;
+        overflow-y: scroll;
         h3{
-            padding-bottom: 40px;
+            padding-bottom: 5px;
         }
         .pastilla-tarjeta{
             height: auto;
             width: 100%;
+            background-color: rgb(219, 216, 216);
             .pastilla-info{
                 height: auto;
                 width: 100%;
