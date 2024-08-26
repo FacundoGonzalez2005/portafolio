@@ -23,12 +23,9 @@ body{
     display: flex;
     height: 100%;
     width: 100%;
-    background-color: burlywood;
+    background-color: rgb(255, 115, 115);
     border-radius: 20px;
-    background-size: 100% 100%;
-    background-position: 50% 50%;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     .titulo{
         display: flex;
@@ -46,23 +43,36 @@ body{
             font-size: 50%;
         }
     }
+    .encabezado-imagen{
+        display: flex;
+        height: 10%;
+        width: 82%;
+    }
     .pastilla{
         display: flex;
-        height: 30%;
+        height: 100px;
         width: 90%;
         background-color: aliceblue;
         border-radius: 20px;
         flex-direction: row;
+        margin-bottom: 2%;
+        padding: 0;
         overflow: hidden;
+        text-decoration: none;
+        color: black;
         .pastilla-imagen{
-            height: 100%;
             width: 30%;
-            object-fit: cover;
+            background-color: #ffe600;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
         }
         .pastilla-texto{
             height: 100%;
             width: 70%;
-            padding: 4%;
+            padding: 6%;
             p:nth-child(1){
                 font-weight: 700;
             }
@@ -82,13 +92,12 @@ body{
     font-weight: 700;
     font-size: 25px;
     padding-left: 5%;
-    
 }
 
 .descripciones{
     height: 55%;
     width: 100%;
-    padding-bottom: 10%;
+    padding-bottom: 25%;
     overflow-y: scroll;
     .contenedor{
         display: flex;
@@ -105,7 +114,7 @@ body{
             border-radius: 20px;
             flex-direction: column;
             overflow: hidden;
-            background-color: rgb(226, 222, 222);
+            background-color: aliceblue;
             padding: 2%;
             .pastilla{
                 display: flex;
@@ -249,17 +258,22 @@ body{
 }
 
 .pastilla-encabezado{
+    display: flex;
     height: 30%;
     width: 100%;
     background-color: rgb(238, 238, 238);
     padding-top: 20px;
+    flex-direction: column;
     .pastilla-imagen{
-        height: 75%;
+        display: flex;
+        height: 180px;
         width: 100%;
-        background-image: url(../img/pastilla2.avif);
-        background-size: 70% 100%;
-        background-repeat: no-repeat;
-        background-position: center;
+        justify-content: center;
+        padding-bottom: 5%;
+        img{
+            height: 100%;
+            border-radius: 20px;
+        }
     }
     .pastilla-texto{
         display: flex;
@@ -434,6 +448,8 @@ body {
     grid-template-columns: repeat(7, 1fr);
     border-top: 1px solid #cccccc00;
     color: gray;
+    background-color: white;
+    border-radius: 20px;
 }
 .days div {
     padding: 10px;
@@ -521,12 +537,13 @@ select {
         height: auto;
         width: 70%;
         flex-direction: row;
-        padding: 3%;
+        margin: 3%;
+        text-decoration: none;
+        border-radius: 20px;
         .imagen-pastilla{
             height: 100%;
             width: 45%;
             border-left: 5px solid orange;
-            padding-left: 10px;
             background-color: #dddddd;
             img{
                 height: 100%;
@@ -536,13 +553,14 @@ select {
         }
         .texto{
             display: flex;
-            background-color: #dfdfdf;
+            background-color: #ffffff;
             height: 100%;
-            width: 55%;
+            width: 65%;
             padding: 15px;
-            gap: 10px;
+            gap: 7px;
             flex-direction: column;
             padding-left: 10%;
+            align-items: center;
             h3{
                 color: rgba(0, 0, 0, 0.74);
             }
@@ -566,4 +584,3 @@ select {
         border-radius: 100%;
     }
 }
-
