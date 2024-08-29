@@ -28,7 +28,7 @@ fetch("json/pastilla.json")
                     </div>
                     <div class="pastilla-texto">
                         <p>${restaurante.nombre}</p>
-                        <p>${restaurante.descripcion}</p>
+                        <p>Hoy a las ${restaurante.hora}</p>
                     </div>
                     <div class="pastilla-boton">
                         <button class="check" id="check"><i class="fa fa-check"></i></button>

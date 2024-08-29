@@ -3,30 +3,45 @@
         "truck_id": "1",
         "nombre": "Aspirina",
         "descripcion": "La aspirina es un medicamento utilizado para aliviar el dolor, reducir la inflamación y bajar la fiebre. También se utiliza en dosis bajas para prevenir ataques cardíacos y accidentes cerebrovasculares.",
-        "imagen": "https://cflvdg.avoz.es/sc/RKTqJY4UXHNUB0F_7Z-FZDa1Ak4=/768x/2021/12/29/00121640791945549871347/Foto/aspirina.png"
+        "imagen": "https://cflvdg.avoz.es/sc/RKTqJY4UXHNUB0F_7Z-FZDa1Ak4=/768x/2021/12/29/00121640791945549871347/Foto/aspirina.png",
+        "hora": "08:45",
+        "duracion": "2 semanas",
+        "cantidad": "2 por día"
     },
     {
         "truck_id": "2",
         "nombre": "Ibuprofeno",
         "descripcion": "El ibuprofeno es un antiinflamatorio no esteroideo (AINE) que se usa para reducir el dolor, la fiebre y la inflamación. Es comúnmente utilizado para el dolor muscular, dolor de cabeza y dolores menstruales.",
-        "imagen": "https://www.dosfarma.com/blog/wp-content/uploads/2018/12/ibuprofeno-16-12-2018.jpg"
+        "imagen": "https://www.dosfarma.com/blog/wp-content/uploads/2018/12/ibuprofeno-16-12-2018.jpg",
+        "hora": "14:32",
+        "duracion": "1 semana",
+        "cantidad": "1 por día"
     },
     {
         "truck_id": "3",
         "nombre": "Paracetamol",
         "descripcion": "El paracetamol es un analgésico y antipirético utilizado para aliviar el dolor y reducir la fiebre. Es ampliamente utilizado para el tratamiento de dolores leves a moderados y fiebre.",
-        "imagen": "https://s2.abcstatics.com/media/salud/2021/05/25/paracetamol-kGtB--1248x698@abc.jpg"
+        "imagen": "https://s2.abcstatics.com/media/salud/2021/05/25/paracetamol-kGtB--1248x698@abc.jpg",
+        "hora": "09:58",
+        "duracion": "1 mes",
+        "cantidad": "2 por día"
     },
     {
         "truck_id": "4",
         "nombre": "Amoxicilina",
         "descripcion": "La amoxicilina es un antibiótico de la familia de las penicilinas. Se usa para tratar una variedad de infecciones bacterianas, incluyendo infecciones del oído, de las vías respiratorias y del tracto urinario.",
-        "imagen": "https://previews.123rf.com/images/pakhnyushchyy/pakhnyushchyy1111/pakhnyushchyy111100676/11239694-pastillas-de-antibi%C3%B3tico-aislado-en-blanco.jpg"
+        "imagen": "https://previews.123rf.com/images/pakhnyushchyy/pakhnyushchyy1111/pakhnyushchyy111100676/11239694-pastillas-de-antibi%C3%B3tico-aislado-en-blanco.jpg",
+        "hora": "11:23",
+        "duracion": "3 semanas",
+        "cantidad": "1 por día"
     },
     {
         "truck_id": "5",
         "nombre": "Loratadina",
         "descripcion": "La loratadina es un antihistamínico utilizado para aliviar los síntomas de la alergia, como la rinitis alérgica y la urticaria. Ayuda a reducir la picazón, el estornudo y el goteo nasal.",
-        "imagen": "https://triomcbo.com/wp-content/uploads/2020/10/B623-Antialergico-Loratadina-10mg.jpg"
+        "imagen": "https://triomcbo.com/wp-content/uploads/2020/10/B623-Antialergico-Loratadina-10mg.jpg",
+        "hora": "16:47",
+        "duracion": "1 mes",
+        "cantidad": "1 por día"
     }
 ]
