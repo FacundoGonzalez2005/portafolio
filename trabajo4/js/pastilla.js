@@ -59,21 +59,10 @@ fetch("json/pastilla.json")
             // Calcula la nueva hora sumando 5 horas
             let horaModificada = sumarHoras(plato.hora, 5);
 
-            // Inyecta la información en el HTML
-            duracion.innerHTML += `
-            <section class="pastilla-fila">
-                <section class="pastilla-duracion">
-                    <span>Duración</span>
-                    <span><i class="fa-regular fa-calendar"></i>${plato.duracion}</span>
-                </section>
-                <section class="pastilla-frecuencia">
-                    <span>Frecuencia</span>
-                    <span><i class="fa-regular fa-clock"></i>${plato.cantidad}</span>
-                </section>
-            </section>
-
-            <section class="pastilla-recordatorio">
-                <h3>Verifique el siguiente</h3>
+            // Condicional para mostrar una o dos tarjetas basadas en la cantidad
+            let tarjetasHTML = '';
+            if (plato.cantidad.includes("2")) {
+                tarjetasHTML = `
                 <section class="pastilla-tarjeta">
                     <div class="pastilla-info">
                         <h4>Hoy a las ${plato.hora}</h4>
@@ -102,7 +91,41 @@ fetch("json/pastilla.json")
                             Finalizar
                         </div>
                     </div>
+                </section>`;
+            } else {
+                tarjetasHTML = `
+                <section class="pastilla-tarjeta">
+                    <div class="pastilla-info">
+                        <h4>Hoy a las ${plato.hora}</h4>
+                        <h5>1 cápsula de ${plato.nombre}</h5>
+                    </div>
+                    <div class="pastilla-fila-botones">
+                        <div class="pastilla-boton1">
+                            Recuérdame más tarde
+                        </div>
+                        <div class="pastilla-boton2">
+                            Finalizar
+                        </div>
+                    </div>
+                </section>`;
+            }
+
+            // Inyecta la información en el HTML
+            duracion.innerHTML += `
+            <section class="pastilla-fila">
+                <section class="pastilla-duracion">
+                    <span>Duración</span>
+                    <span><i class="fa-regular fa-calendar"></i>${plato.duracion}</span>
                 </section>
+                <section class="pastilla-frecuencia">
+                    <span>Frecuencia</span>
+                    <span><i class="fa-regular fa-clock"></i>${plato.cantidad}</span>
+                </section>
+            </section>
+
+            <section class="pastilla-recordatorio">
+                <h3>Verifique el siguiente</h3>
+                ${tarjetasHTML}
             </section>`;
         }
     });
