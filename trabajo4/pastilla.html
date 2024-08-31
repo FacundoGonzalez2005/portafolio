@@ -10,65 +10,32 @@
 </head>
 <body>
     <nav class="pastilla-iconos">
-        <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <a id="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
         <i class="fa-solid fa-pen"></i>
     </nav>
 
     <header class="pastilla-encabezado">    
-        <!-- <div class="pastilla-imagen">
-            <img src="./img/pastilla2.avif" alt="">
-        </div>
-        <div class="pastilla-texto">
-            <h2>Nombre pastilla</h2>
-            <span>Descripcion pastilla</span>
-        </div>    -->
+        <!-- Contenido de encabezado de pastilla aquí -->
     </header>
 
     <main class="pastilla-tiempo">
-        <!-- <section class="pastilla-fila">
-            <section class="pastilla-duracion">
-                <span>Duracion</span>
-                <span><i class="fa-regular fa-calendar"></i>1 Mes</span>
-            </section>
-            <section class="pastilla-frecuencia">
-                <span>Frecuencia</span>
-                <span><i class="fa-regular fa-clock"></i>2x Semana</span>
-            </section>
-        </section>
-
-        <section class="pastilla-recordatorio">
-            <h3>Verifique el siguiente</h3>
-            <section class="pastilla-tarjeta">
-                <div class="pastilla-info">
-                    <h4>Hari ini Pukul 10:00</h4>
-                    <h5>1 cápsula de antihistamínico</h5>
-                </div>
-                <div class="pastilla-fila-botones">
-                    <div class="pastilla-boton1">
-                        Recuérdame más tarde
-                    </div>
-                    <div class="pastilla-boton2">
-                        Finalizar
-                    </div>
-                </div>
-            </section>
-
-            <section class="pastilla-tarjeta">
-                <div class="pastilla-info">
-                    <h4>Hari ini Pukul 10:00</h4>
-                    <h5>1 cápsula de antihistamínico</h5>
-                </div>
-                <div class="pastilla-fila-botones">
-                    <div class="pastilla-boton1">
-                        Recuérdame más tarde
-                    </div>
-                    <div class="pastilla-boton2">
-                        Finalizar
-                    </div>
-                </div>
-            </section>
-        </section> -->
+        <!-- Contenido principal de pastilla aquí -->
     </main>
     <script src="js/pastilla.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const origin = localStorage.getItem("origin");
+            const backLink = document.getElementById("back-link");
+
+            if (origin === "calendario") {
+                backLink.href = "calendario.html";
+            } else {
+                backLink.href = "index.html";
+            }
+
+            // Limpia el origen después de redirigir
+            localStorage.removeItem("origin");
+        });
+    </script>
 </body>
 </html>

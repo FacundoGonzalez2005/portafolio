@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Añadir redireccionamiento a pastilla.html
                 horarioElement.querySelector(".pastilla").addEventListener("click", () => {
+                    localStorage.setItem("origin", "calendario");
                     localStorage.setItem("indiceCache", pastilla.truck_id);
                     window.location.href = "pastilla.html";
                 });
