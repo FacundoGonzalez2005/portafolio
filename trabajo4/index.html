@@ -57,6 +57,18 @@
                 document.getElementById('nombreUsuario').textContent = nombreUsuario;
             }
         });
+
+        document.addEventListener('click', function(event) {
+            if (event.target.closest('.recordatorio-boton')) {
+                // Selecciona el contenedor del botón de recordatorio
+                const pastillaContenedor = event.target.closest('.pastilla-contenedor');
+                // Alterna el estado del botón de check
+                const checkButton = pastillaContenedor.querySelector('.check');
+                if (checkButton) {
+                    checkButton.classList.toggle('checked');
+                }
+            }
+        });
     </script>
 </body>
 </html>
