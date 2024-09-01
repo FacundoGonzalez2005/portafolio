@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estadisticas</title>
+    <title>Estadísticas</title>
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/fawesome-all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Estadisticas</h1>
+    <h1>Estadísticas</h1>
+    
+    <div class="estadisticas-container">
+        <div class="estadistica-card">
+            <img src="https://cflvdg.avoz.es/sc/RKTqJY4UXHNUB0F_7Z-FZDa1Ak4=/768x/2021/12/29/00121640791945549871347/Foto/aspirina.png" alt="Aspirina">
+            <div class="estadistica-content">
+                <h3>Aspirina</h3>
+                <p>2 por día durante 2 semanas</p>
+                <p class="estadistica-hora">08:45</p>
+            </div>
+        </div>
+        <!-- Repetir los bloques anteriores para cada pastilla -->
+    </div>
+    
     <div class="menu">
         <a href="index.html"><i class="fa-duotone fa-solid fa-house"></i></a>
         <a href="calendario.html"><i class="fa-duotone fa-solid fa-calendar-days"></i></a>
@@ -19,5 +32,8 @@
         <a href="estadisticas.html"><i class="fa-duotone fa-solid fa-chart-simple"></i></a>
         <a href="login.html"><i class="fa-duotone fa-solid fa-user"></i></a>
     </div>
+
+    <script src="js/leerEstadisticas.js"></script>
+
 </body>
 </html>

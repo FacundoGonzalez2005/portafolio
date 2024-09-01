@@ -589,3 +589,91 @@ select {
         border-radius: 100%;
     }
 }
+
+/* -----------------------------ESTADISTICAS.HTML-------------------------- */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+}
+
+.estadisticas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    padding-bottom: 40%;
+}
+
+.estadistica-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.estadistica-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.estadistica-content {
+    flex-grow: 1;
+}
+
+.estadistica-content h3 {
+    margin: 0;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.estadistica-content p {
+    margin: 5px 0;
+    color: #777;
+    font-size: 0.9em;
+}
+
+.estadistica-hora {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.menu a {
+    color: #007bff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.menu-agregar {
+    font-size: 2em;
+    color: #007bff;
+    cursor: pointer;
+}
+
+/* -----------------------------LOGIN.HTML-------------------------- */
