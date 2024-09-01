@@ -11,7 +11,7 @@
 <body>
     <div class="encabezado">
         <div class="titulo">
-            <p>¡Hola Facundo!</p>
+            <p id="saludo">¡Hola <span id="nombreUsuario">Facundo</span>!</p>
             <p>¡Veamos la lista de verificación a continuación!</p>
         </div>
         <div class="encabezado-imagen">
@@ -47,7 +47,16 @@
         <a href="estadisticas.html"><i class="fa-duotone fa-solid fa-chart-simple"></i></a>
         <a href="login.html"><i class="fa-duotone fa-solid fa-user"></i></a>
     </div>
+    
     <script src="js/mostrarPastilla.js"></script>
     <script src="js/leerjson.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nombreUsuario = localStorage.getItem('nombreUsuario');
+            if (nombreUsuario) {
+                document.getElementById('nombreUsuario').textContent = nombreUsuario;
+            }
+        });
+    </script>
 </body>
 </html>

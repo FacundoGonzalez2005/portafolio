@@ -20,10 +20,13 @@
     </div>
 
     <div class="contenedor-login">
-            <h1>Ingresa tu nombre: </h1>
-            <div class="contenedor-texto">
-                <input type="text" class="texto">
-            </div>
+        <h1>Ingresa tu nombre:</h1>
+        <div class="contenedor-texto">
+            <input type="text" class="texto" id="inputNombre">
+        </div>
+        <div class="boton">
+            <button id="guardarNombre">Guardar Nombre</button>
+        </div>
     </div>
 
     <div class="menu">
@@ -35,5 +38,27 @@
         <a href="estadisticas.html"><i class="fa-duotone fa-solid fa-chart-simple"></i></a>
         <a href="login.html"><i class="fa-duotone fa-solid fa-user"></i></a>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cargar el nombre guardado, si existe
+            const inputNombre = document.getElementById('inputNombre');
+            const nombreGuardado = localStorage.getItem('nombreUsuario');
+            if (nombreGuardado) {
+                inputNombre.value = nombreGuardado;
+            }
+
+            // Guardar el nombre al hacer clic en el botón
+            document.getElementById('guardarNombre').addEventListener('click', function() {
+                const nombre = inputNombre.value.trim();
+                if (nombre) {
+                    localStorage.setItem('nombreUsuario', nombre);
+                    window.location.href = 'index.html'; // Redirigir a la página de inicio
+                } else {
+                    alert('Por favor, ingrese un nombre.');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
