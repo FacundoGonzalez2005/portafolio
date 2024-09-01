@@ -607,16 +607,9 @@ select {
     }
 }
 
-/* -----------------------------ESTADISTICAS.HTML-------------------------- */
+/* -----------------------------ESTADISTICAS.CSS-------------------------- */
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
-
-.estadisticas-titulo{
+.estadisticas-titulo {
     display: flex;
     background-color: rgb(255, 115, 115);
     color: white;
@@ -631,18 +624,20 @@ body {
 }
 
 .grafico-container {
-    max-width: 800px;
+    max-width: 100%;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     padding-top: 20%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .grafico-barras {
     display: flex;
     flex-direction: column;
     align-items: stretch;
 }
+
 .barra {
     display: flex;
     align-items: center;
@@ -653,6 +648,7 @@ body {
     position: relative;
     background: #e0e0e0;
 }
+
 .barra-nombre {
     width: 130px;
     background: #007bff;
@@ -661,35 +657,34 @@ body {
     text-align: center;
     padding: 10px;
 }
+
 .barra-contenido {
     flex-grow: 1;
     height: 30px;
     background-color: #e0e0e0;
     position: relative;
 }
+
 .barra-duracion {
     height: 100%;
     background-color: #28a745;
-    padding-left: 3px;
-    text-align: right;
-    line-height: 30px;
+    padding-left: 10px;
     padding-right: 10px;
+    text-align: center;
+    line-height: 30px;
     color: white;
     font-weight: bold;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    overflow: hidden;
     transition: width 0.3s ease;
 }
+
 .barra:hover .barra-duracion {
     background-color: #218838;
 }
-.barra-info {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    color: #333;
-    font-size: 12px;
-}
+
+
 
 /* -----------------------------LOGIN.HTML-------------------------- */
 

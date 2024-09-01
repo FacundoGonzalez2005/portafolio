@@ -1,59 +1,45 @@
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('./json/pastilla.json')
+document.addEventListener('DOMContentLoaded', () => {
+    const graficoBarras = document.getElementById('graficoBarras');
+
+    // Obtener datos del archivo JSON
+    fetch('json/pastilla.json')
         .then(response => response.json())
-        .then(data => {
-            const container = document.getElementById('graficoBarras');
-            
-            // Convertir duración en días
-            function duracionEnDias(duracion) {
-                const match = duracion.match(/(\d+)\s*(día|semana|mes)/);
-                if (match) {
-                    const cantidad = parseInt(match[1]);
-                    const unidad = match[2];
-                    switch (unidad) {
-                        case 'día':
-                            return cantidad;
-                        case 'semana':
-                            return cantidad * 7;
-                        case 'mes':
-                            return cantidad * 30;
-                        default:
-                            return 0;
-                    }
+        .then(pastillas => {
+            // Convertir duraciones a días y crear las barras del gráfico
+            pastillas.forEach(pastilla => {
+                const duracion = pastilla.duracion.toLowerCase();
+                let dias = 0;
+
+                if (duracion.includes('día')) {
+                    dias = parseInt(duracion.split(' ')[0], 10);
+                } else if (duracion.includes('semana')) {
+                    dias = parseInt(duracion.split(' ')[0], 10) * 7;
+                } else if (duracion.includes('mes')) {
+                    dias = parseInt(duracion.split(' ')[0], 10) * 30;
+                } else if (duracion.includes('año')) {
+                    dias = parseInt(duracion.split(' ')[0], 10) * 365;
                 }
-                return 0;
-            }
 
-            data.forEach(pastilla => {
-                const duracion = duracionEnDias(pastilla.duracion);
-
-                // Crear el elemento de la barra
                 const barra = document.createElement('div');
-                barra.classList.add('barra');
+                barra.className = 'barra';
 
                 const nombre = document.createElement('div');
-                nombre.classList.add('barra-nombre');
+                nombre.className = 'barra-nombre';
                 nombre.textContent = pastilla.nombre;
-
+                
                 const contenido = document.createElement('div');
-                contenido.classList.add('barra-contenido');
+                contenido.className = 'barra-contenido';
 
                 const duracionBarra = document.createElement('div');
-                duracionBarra.classList.add('barra-duracion');
-                duracionBarra.style.width = `${duracion}px`;
-                duracionBarra.textContent = `${pastilla.duracion}`;
-
-                const info = document.createElement('div');
-                info.classList.add('barra-info');
-                info.textContent = `${duracion} días`;
+                duracionBarra.className = 'barra-duracion';
+                duracionBarra.style.width = `${dias * 10}px`; // Ajusta el factor de escala si es necesario
+                duracionBarra.textContent = `${dias} días`;
 
                 contenido.appendChild(duracionBarra);
-                contenido.appendChild(info);
                 barra.appendChild(nombre);
                 barra.appendChild(contenido);
-
-                container.appendChild(barra);
+                graficoBarras.appendChild(barra);
             });
         })
-        .catch(error => console.error('Error al cargar el archivo JSON:', error));
+        .catch(error => console.error('Error cargando el archivo JSON:', error));
 });
