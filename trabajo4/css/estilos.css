@@ -699,12 +699,38 @@ h1 {
             font-size: 35px;
         }
         p:nth-child(2){
-            font-size: 50%;
+            font-size: 60%;
+            padding-bottom: 10px;
         }
     }
     .encabezado-imagen{
         display: flex;
         height: 10%;
         width: 82%;
+    }
+}
+
+.contenedor-login{
+    background-color: rgb(255, 115, 115);
+    padding: 5%;
+    margin-top: 30%;
+    border-radius: 20px;
+    h1{
+        color: white;
+    }
+    .contenedor-texto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+        .texto{
+            width: 100%;
+            padding-bottom: 3px;
+            border-radius: 10px;
+            border: 0;
+            padding-left: 10px;
+            padding-top: 3px;
+            font-size: 20px;
+        }
     }
 }
