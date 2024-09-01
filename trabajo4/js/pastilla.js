@@ -1,6 +1,5 @@
 let resto = document.querySelector(".pastilla-encabezado");
-console.log(localStorage.getItem("indiceCache"))
-
+console.log(localStorage.getItem("indiceCache"));
 
 fetch("json/pastilla.json")
   .then((response) => {
@@ -8,7 +7,7 @@ fetch("json/pastilla.json")
   })
   .then((data) => {
     data.forEach(plato => {
-        if( plato.truck_id == localStorage.getItem("indiceCache")){
+        if(plato.truck_id == localStorage.getItem("indiceCache")){
             resto.innerHTML += `
             <div class="pastilla-imagen">
                 <img src=${plato.imagen} alt="">
@@ -30,36 +29,23 @@ console.log("Índice Cacheado:", indiceCache);
 
 // Función para sumar horas a una hora dada en formato "HH:MM"
 function sumarHoras(hora, horasASumar) {
-  // Divide la hora en horas y minutos
   let [horas, minutos] = hora.split(":").map(Number);
-
-  // Crea una instancia de Date con la hora actual
   let fecha = new Date();
   fecha.setHours(horas);
   fecha.setMinutes(minutos);
   fecha.setSeconds(0);
-  
-  // Suma las horas
   fecha.setHours(fecha.getHours() + horasASumar);
-
-  // Obtén las nuevas horas y minutos
   let nuevasHoras = fecha.getHours().toString().padStart(2, '0');
   let nuevosMinutos = fecha.getMinutes().toString().padStart(2, '0');
-
-  // Devuelve la nueva hora en formato "HH:MM"
   return `${nuevasHoras}:${nuevosMinutos}`;
 }
 
-// Realiza la solicitud al archivo JSON
 fetch("json/pastilla.json")
   .then((response) => response.json())
   .then((data) => {
     data.forEach(plato => {
         if (plato.truck_id === indiceCache) {
-            // Calcula la nueva hora sumando 5 horas
             let horaModificada = sumarHoras(plato.hora, 5);
-
-            // Condicional para mostrar una o dos tarjetas basadas en la cantidad
             let tarjetasHTML = '';
             if (plato.cantidad.includes("2")) {
                 tarjetasHTML = `
@@ -110,7 +96,6 @@ fetch("json/pastilla.json")
                 </section>`;
             }
 
-            // Inyecta la información en el HTML
             duracion.innerHTML += `
             <section class="pastilla-fila">
                 <section class="pastilla-duracion">
@@ -134,11 +119,7 @@ fetch("json/pastilla.json")
     console.error('Error al cargar el archivo JSON:', error);
   });
 
-// Verifica el valor almacenado en localStorage
-console.log("Valor almacenado en localStorage:", localStorage.getItem("indiceCache"));
-
 document.addEventListener("DOMContentLoaded", () => {
-    // Abrir ventana emergente
     const editButton = document.querySelector(".fa-pen");
     const modal = document.getElementById("edit-modal");
     const closeModal = document.querySelector(".close");
@@ -146,67 +127,52 @@ document.addEventListener("DOMContentLoaded", () => {
     const guardarButton = document.getElementById("guardar");
     const nombreInput = document.getElementById("nombre");
     const descripcionInput = document.getElementById("descripcion");
-    
-    // Abrir modal al hacer clic en el ícono de lápiz
+
     editButton.addEventListener("click", () => {
         modal.style.display = "block";
-        // Cargar los datos actuales en los campos de edición
         fetch("json/pastilla.json")
-          .then(response => response.json())
-          .then(data => {
-            const pastilla = data.find(plato => plato.truck_id === localStorage.getItem("indiceCache"));
-            if (pastilla) {
-                nombreInput.value = pastilla.nombre;
-                descripcionInput.value = pastilla.descripcion;
-            }
-          });
+            .then(response => response.json())
+            .then(data => {
+                const pastilla = data.find(plato => plato.truck_id === localStorage.getItem("indiceCache"));
+                if (pastilla) {
+                    nombreInput.value = pastilla.nombre;
+                    descripcionInput.value = pastilla.descripcion;
+                }
+            });
     });
 
-    // Cerrar modal al hacer clic en la X
     closeModal.addEventListener("click", () => {
         modal.style.display = "none";
     });
 
-    // Cerrar modal al hacer clic en Cancelar
     cancelarButton.addEventListener("click", () => {
         modal.style.display = "none";
     });
 
-    // Guardar cambios y cerrar modal
     guardarButton.addEventListener("click", () => {
         const nombre = nombreInput.value;
         const descripcion = descripcionInput.value;
         const indiceCache = localStorage.getItem("indiceCache");
 
         fetch("json/pastilla.json")
-          .then(response => response.json())
-          .then(data => {
-            const pastilla = data.find(plato => plato.truck_id === indiceCache);
-            if (pastilla) {
-                pastilla.nombre = nombre;
-                pastilla.descripcion = descripcion;
-                // Guardar el JSON modificado en el archivo
-                fetch("json/pastilla.json", {
-                    method: "PUT",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(data)
-                })
-                .then(response => response.json())
-                .then(() => {
-                    // Actualizar la vista en la página
-                    location.reload();
-                });
-            }
-          });
-    });
+            .then(response => response.json())
+            .then(data => {
+                const pastilla = data.find(plato => plato.truck_id === indiceCache);
+                if (pastilla) {
+                    pastilla.nombre = nombre;
+                    pastilla.descripcion = descripcion;
+                }
 
-    // Cerrar modal al hacer clic fuera de él
-    window.addEventListener("click", (event) => {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
+                // Simular actualización en el frontend
+                document.querySelector(".pastilla-encabezado h2").innerText = nombre;
+                document.querySelector(".pastilla-encabezado span").innerText = descripcion;
+
+                // Cerrar el modal
+                modal.style.display = "none";
+
+                // Actualizar el archivo JSON en el servidor (esto no es posible con fetch directamente)
+                // Necesitarías un backend para manejar esto
+                console.log("Datos actualizados en JSON:", data);
+            });
     });
 });
-
