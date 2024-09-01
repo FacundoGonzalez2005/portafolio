@@ -425,6 +425,7 @@ a{
     background-color: #fefefe;
     margin: 15% auto; /* Margen superior e inferior */
     padding: 20px;
+    margin-top: 60%;
     border: 1px solid #888;
     width: 80%; /* Ancho del modal */
     max-width: 500px; /* Ancho máximo */
