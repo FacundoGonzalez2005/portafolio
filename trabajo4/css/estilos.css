@@ -677,3 +677,34 @@ h1 {
 }
 
 /* -----------------------------LOGIN.HTML-------------------------- */
+
+.encabezado-login{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 115, 115);
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    .titulo{
+        display: flex;
+        height: 30%;
+        width: 100%;
+        align-items: center;
+        color: white;
+        font-size: 25px;
+        flex-direction: column;
+        p:nth-child(1){
+            font-weight: 700;
+            font-size: 35px;
+        }
+        p:nth-child(2){
+            font-size: 50%;
+        }
+    }
+    .encabezado-imagen{
+        display: flex;
+        height: 10%;
+        width: 82%;
+    }
+}
