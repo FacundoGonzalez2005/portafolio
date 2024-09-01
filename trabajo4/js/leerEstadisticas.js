@@ -1,37 +1,58 @@
-document.addEventListener('DOMContentLoaded', function () {
-    fetch('json/pastilla.json')
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('./json/pastilla.json')
         .then(response => response.json())
         .then(data => {
-            const container = document.querySelector('.estadisticas-container');
+            const container = document.getElementById('graficoBarras');
+            
+            // Convertir duración en días
+            function duracionEnDias(duracion) {
+                const match = duracion.match(/(\d+)\s*(día|semana|mes)/);
+                if (match) {
+                    const cantidad = parseInt(match[1]);
+                    const unidad = match[2];
+                    switch (unidad) {
+                        case 'día':
+                            return cantidad;
+                        case 'semana':
+                            return cantidad * 7;
+                        case 'mes':
+                            return cantidad * 30;
+                        default:
+                            return 0;
+                    }
+                }
+                return 0;
+            }
+
             data.forEach(pastilla => {
-                const card = document.createElement('div');
-                card.classList.add('estadistica-card');
+                const duracion = duracionEnDias(pastilla.duracion);
 
-                const img = document.createElement('img');
-                img.src = pastilla.imagen;
-                img.alt = pastilla.nombre;
+                // Crear el elemento de la barra
+                const barra = document.createElement('div');
+                barra.classList.add('barra');
 
-                const content = document.createElement('div');
-                content.classList.add('estadistica-content');
-
-                const nombre = document.createElement('h3');
+                const nombre = document.createElement('div');
+                nombre.classList.add('barra-nombre');
                 nombre.textContent = pastilla.nombre;
 
-                const descripcion = document.createElement('p');
-                descripcion.textContent = `${pastilla.cantidad} durante ${pastilla.duracion}`;
+                const contenido = document.createElement('div');
+                contenido.classList.add('barra-contenido');
 
-                const hora = document.createElement('p');
-                hora.classList.add('estadistica-hora');
-                hora.textContent = pastilla.hora;
+                const duracionBarra = document.createElement('div');
+                duracionBarra.classList.add('barra-duracion');
+                duracionBarra.style.width = `${duracion}px`;
+                duracionBarra.textContent = `${pastilla.duracion}`;
 
-                content.appendChild(nombre);
-                content.appendChild(descripcion);
-                content.appendChild(hora);
+                const info = document.createElement('div');
+                info.classList.add('barra-info');
+                info.textContent = `${duracion} días`;
 
-                card.appendChild(img);
-                card.appendChild(content);
+                contenido.appendChild(duracionBarra);
+                contenido.appendChild(info);
+                barra.appendChild(nombre);
+                barra.appendChild(contenido);
 
-                container.appendChild(card);
+                container.appendChild(barra);
             });
         })
         .catch(error => console.error('Error al cargar el archivo JSON:', error));
