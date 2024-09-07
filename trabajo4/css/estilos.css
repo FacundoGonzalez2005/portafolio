@@ -246,11 +246,11 @@ a {
         .contenedor {
             flex-direction: row;
             flex-wrap: wrap;
-            gap: 50px; /* Ajusta el espacio entre columnas */
-            padding-left: 10%;
+            gap: 40px; /* Ajusta el espacio entre columnas */
+            padding-left: 7%;
             padding-top: 5%;
             .pastilla-contenedor {
-                width: 600px;
+                width: 515px;
                 height: 200px;
                 flex: 1 1 calc(50% - 20px); /* Ajusta el tamaño para dos columnas con margen */
                 display: flex;
