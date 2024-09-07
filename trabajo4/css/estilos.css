@@ -1019,6 +1019,14 @@ select {
            background-color: #007bff;
            font-size: 20px;
         }
+        button:hover{
+            cursor: pointer;
+            box-shadow: 0 0 13px -3px white;
+            transition: calc(.5s);
+            transform: scale(1.05);
+            color: white;
+            background-color: #005ec3;
+         }
     }
 }
 
