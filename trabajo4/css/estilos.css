@@ -1050,3 +1050,18 @@ select {
         margin-bottom: 10%;
     }
 }
+
+
+/* -----------------------------CARGA-PASTILLA.HTML-------------------------- */
+
+.cargar-pastilla-iconos{
+    display: flex;
+    height: 8%;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 20px;
+    a{
+        color: black;
+    }
+}
