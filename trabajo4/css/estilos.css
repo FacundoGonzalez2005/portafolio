@@ -1135,3 +1135,18 @@ select {
          }
     }
 }
+
+@media (orientation: landscape) {
+    .titulo-carga{
+        position:absolute;
+        top: 0;
+    }
+    .cargar-pastilla-iconos{
+        padding-top: 7%;
+        font-size: 30px;
+    }
+    .contenedor-carga{
+        margin-top: 1%;
+        padding: 2%;
+    }
+}
