@@ -19,7 +19,7 @@ body{
 
 /* ----------------------index.html----------------------- */
 
-.encabezado{
+.encabezado {
     display: flex;
     height: 100%;
     width: 100%;
@@ -27,7 +27,7 @@ body{
     border-radius: 20px;
     flex-direction: column;
     align-items: center;
-    .titulo{
+    .titulo {
         display: flex;
         height: 30%;
         width: 100%;
@@ -35,22 +35,22 @@ body{
         color: white;
         font-size: 25px;
         flex-direction: column;
-        p:nth-child(1){
+        p:nth-child(1) {
             font-weight: 700;
             font-size: 35px;
         }
-        p:nth-child(2){
+        p:nth-child(2) {
             font-size: 50%;
             font-weight: 500;
             font-size: 15px;
         }
     }
-    .encabezado-imagen{
+    .encabezado-imagen {
         display: flex;
         height: 10%;
         width: 82%;
     }
-    .pastilla2{
+    .pastilla2 {
         display: flex;
         height: 100px;
         width: 90%;
@@ -62,57 +62,61 @@ body{
         overflow: hidden;
         text-decoration: none;
         color: black;
-        .pastilla-imagen{
+        .pastilla-imagen {
             width: 30%;
             background-color: #ffe600;
-            img{
+            img {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
             }
         }
-        .pastilla-texto{
+        .pastilla-texto {
             height: 100%;
             width: 70%;
             padding: 6%;
-            p:nth-child(1){
+            p:nth-child(1) {
                 font-weight: 700;
             }
-            p:nth-child(2){
+            p:nth-child(2) {
                 font-size: 14px;
             }
         }
     }
 }
 
-.titulo-descripcion{
+.titulo-descripcion {
     display: flex;
-    position: sticky;
+    background-color: rgb(255, 115, 115);
+    color: white;
     width: 100%;
-    color: black;
-    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border-bottom: solid 5px white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    font-size: 20px;
+    margin-top: 2%;
     font-weight: 700;
-    font-size: 25px;
-    padding-left: 5%;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.descripciones{
+.descripciones {
     height: 55%;
     width: 100%;
     padding-bottom: 25%;
     overflow-y: scroll;
-    .contenedor{
+    .contenedor {
         display: flex;
         height: auto;
         width: 100%;
-        flex-direction: column;  
+        flex-direction: column;
         padding: 10px;
         gap: 20px;
-        .pastilla-contenedor{
+        .pastilla-contenedor {
             text-decoration: none;
             display: flex;
             height: 35%;
@@ -122,7 +126,7 @@ a{
             overflow: hidden;
             background-color: aliceblue;
             padding: 2%;
-            .pastilla{
+            .pastilla {
                 display: flex;
                 height: 75%;
                 width: 100%;
@@ -130,32 +134,32 @@ a{
                 overflow: hidden;
                 justify-content: center;
                 align-items: center;
-                .pastilla-imagen{
+                .pastilla-imagen {
                     height: 100%;
                     width: 30%;
                     object-fit: cover;
-                    img{
+                    img {
                         height: 70px;
                         width: 100%;
                         object-fit: cover;
                         border-radius: 10px;
                     }
                 }
-                .pastilla-texto{
+                .pastilla-texto {
                     height: 100%;
                     width: 50%;
                     padding: 3%;
-                    p:nth-child(1){
+                    p:nth-child(1) {
                         font-weight: 700;
                         color: black;
                     }
-                    p:nth-child(2){
+                    p:nth-child(2) {
                         font-size: 12px;
                         color: rgb(104, 104, 104);
                         padding-right: 2%;
                     }
                 }
-                .pastilla-boton{
+                .pastilla-boton {
                     display: flex;
                     height: 100%;
                     width: 10%;
@@ -163,13 +167,13 @@ a{
                     align-items: center;
                 }
             }
-            .recordatorio{
+            .recordatorio {
                 display: flex;
                 height: 28%;
                 width: 100%;
                 justify-content: center;
                 align-items: center;
-                .recordatorio-boton{
+                .recordatorio-boton {
                     display: flex;
                     height: 100%;
                     width: 80%;
@@ -180,11 +184,11 @@ a{
                     border-radius: 5px;
                     color: orange;
                     font-weight: 600;
-                    i{
-                        padding-right: 2%; 
-                     }
+                    i {
+                        padding-right: 2%;
+                    }
                 }
-                .recordatorio-boton:hover{
+                .recordatorio-boton:hover {
                     cursor: pointer;
                 }
             }
@@ -192,25 +196,88 @@ a{
     }
 }
 
-.menu{
+@media (orientation: landscape) {
+    .encabezado {
+        width: 90%;
+        .titulo {
+            p:nth-child(1) {
+                font-size: 60px;
+            }
+            p:nth-child(2) {
+                font-size: 30px;
+            }
+        }
+        .encabezado-imagen {
+            width: 40%;
+        }
+        .pastilla2 {
+            height: 150px;
+            width: 43%;
+            .pastilla-imagen {
+                width: 30%;
+                background-color: #ffe600;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .pastilla-texto {
+                height: 100%;
+                width: 70%;
+                padding: 6%;
+                p:nth-child(1) {
+                    font-weight: 700;
+                }
+                p:nth-child(2) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .titulo-descripcion {
+        font-size: 40px;
+        margin-top: 2%;
+        width: 90%;
+    }
+
+    .descripciones {
+        .contenedor {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 50px; /* Ajusta el espacio entre columnas */
+            padding-left: 10%;
+            padding-top: 5%;
+            .pastilla-contenedor {
+                width: 600px;
+                height: 200px;
+                flex: 1 1 calc(50% - 20px); /* Ajusta el tamaño para dos columnas con margen */
+                display: flex;
+            }
+        }
+    }
+}
+
+.menu {
     display: flex;
-    position: fixed; /* lo que hace es que fija una clase en la posiscion que vos quieras */
-    bottom: 0; /* ejemplo del fixed */
+    position: fixed;
+    bottom: 0;
     height: 10%;
     width: 100%;
     background-color: white;
     justify-content: space-around;
     align-items: center;
-    border-radius: 20px  20px  0 0;
-    i{
+    border-radius: 20px 20px 0 0;
+    i {
         color: black;
         font-size: 20px;
     }
-    i:hover{
+    i:hover {
         color: blue;
         transform: scale(1.3);
     }
-    .menu-agregar{
+    .menu-agregar {
         display: flex;
         height: 70%;
         width: 15%;
@@ -223,7 +290,7 @@ a{
         top: -35%;
         border-radius: 20px;
     }
-    .menu-agregar:hover{
+    .menu-agregar:hover {
         cursor: pointer;
         height: 73%;
         width: 16%;
@@ -231,20 +298,20 @@ a{
     }
 }
 
-.check{
+.check {
     padding: 20px;
     border-radius: 20px;
     font-size: 0px;
     background-color: orange;
     color: white;
     border: 0;
-    i{
+    i {
         font-size: 20px;
         font-weight: 900;
     }
 }
 
-.transparent{
+.transparent {
     color: transparent;
 }
 
@@ -512,9 +579,15 @@ body {
 }
 
 .subtituloc{
+    display: flex;
     min-height: auto;
-    width: 100%;
+    width: 109%;
     font-size: 25px;
+    background-color: rgb(255, 115, 115);
+    color: white;
+    justify-content: center;
+    border: solid 5px white;
+    border-radius: 15px;
 }
 
 .calendar {
@@ -683,6 +756,64 @@ select {
         width: 20px;
         background-color: rgb(231, 129, 33);
         border-radius: 100%;
+    }
+}
+
+@media (orientation: landscape) {
+
+    .tituloc{
+        width: 95%;
+    }
+
+    .calendar {
+        margin-top: 5%;
+    }
+
+    .horario{
+        height: 200px;
+        width: 100%;
+        .contenedor-hora{
+            gap: 45%;
+            width: 20%;
+            font-size: 25px;
+        }
+        .pastilla{
+            width: 50%;
+            margin: 3%;
+            padding-left: 6%;
+            .imagen-pastilla{
+                height: 100%;
+                width: 45%;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .texto{
+                gap: 6px;
+                padding-left: 6%;
+                h3{
+                    font-size: 25px;
+                }
+                h6{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+
+    .linea{
+        height: 4px;
+        width: 95%;
+        .circulo{
+            height: 30px;
+            width: 30px;
+        }
+    }
+
+    .subtituloc{
+        font-size: 35px;
     }
 }
 
