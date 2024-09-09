@@ -83,6 +83,12 @@ body{
             }
         }
     }
+    .pastilla2:hover {
+        cursor: pointer;
+        border: solid 3px orange;
+        transform: scale(1.03);
+        transition: calc(.5s);
+    }
 }
 
 .titulo-descripcion {
@@ -194,7 +200,7 @@ a {
                 }
             }
         }
-        .pastilla-.contenedor {
+        .pastilla-contenedor:hover {
             cursor: pointer;
             border: solid 3px orange;
             transform: scale(1.03);
