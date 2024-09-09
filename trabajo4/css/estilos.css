@@ -472,6 +472,7 @@ a {
                 padding-left: 8px;
                 padding: 8px;
                 gap: 10px;
+                font-size: 20px;
                 h5{
                     color: rgb(151, 150, 150);
                 }
@@ -504,6 +505,75 @@ a {
                     align-items: center;
                     border-radius: 12px;
                     padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    .pastilla-encabezado{
+        .pastilla-imagen{
+            height: 260px;
+        }
+        .pastilla-texto{
+            font-size: 19px;
+        }
+    }
+
+    .pastilla-tiempo{
+        .pastilla-fila{
+            .pastilla-duracion{
+                font-size: 20px;
+                span:nth-child(2){
+                    font-size: 25px;
+                    i{
+                        padding-right: 6%;
+                        font-size: 30px;
+                    }
+                }
+            }
+            .pastilla-frecuencia{
+                font-size: 20px;
+                span:nth-child(2){
+                    font-size: 25px;
+                    i{
+                        padding-right: 6%;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+
+        .pastilla-recordatorio{
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            .pastilla-tarjeta{
+                height: auto;
+                width: 70%;
+                .pastilla-info{
+                    gap: 30px;
+                }
+                .pastilla-fila-botones{
+                    padding: 30px 0;
+                    .pastilla-boton1{
+                        font-size: 19px;
+                    }
+                    .pastilla-boton2{
+                        font-size: 19px;
+                    }
+                    .pastilla-boton1:hover{
+                        cursor: pointer;
+                        background-color: blue;
+                        color: white;
+                    }
+                    .pastilla-boton2:hover{
+                        cursor: pointer;
+                        background-color: white;
+                        color: blue;
+                        border: solid 1px blue;
+                    }
                 }
             }
         }
@@ -587,6 +657,14 @@ textarea {
 #guardar {
     background-color: #4CAF50; /* Verde */
     color: white;
+}
+
+@media (orientation: landscape) {
+
+    .modal-content {
+        margin-top: 15%;
+    }
+
 }
 
 
