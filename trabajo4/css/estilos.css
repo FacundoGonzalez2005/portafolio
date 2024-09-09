@@ -283,7 +283,7 @@ a {
     .menu-agregar {
         display: flex;
         height: 70%;
-        width: 15%;
+        width: 10%;
         position: absolute;
         background-color: rgb(10, 10, 100);
         color: white;
@@ -292,6 +292,7 @@ a {
         font-size: 25px;
         top: -35%;
         border-radius: 20px;
+        left: 45%;
     }
     .menu-agregar:hover {
         cursor: pointer;
