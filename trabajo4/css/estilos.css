@@ -361,11 +361,23 @@ a {
     width: 100%;
     justify-content: space-between;
     padding: 20px;
-    font-size: 20px;
+    font-size: 25px;
+    cursor: pointer;
     a{
         color: black;
     }
+    a:hover{
+        color: rgb(0, 33, 122);
+        transform: scale(1.3);
+        transition:calc(.5s);
+    }
+    i:hover{
+        color: rgb(0, 33, 122);
+        transform: scale(1.3);
+        transition:calc(.5s);
+    }
 }
+
 
 .pastilla-encabezado{
     display: flex;
@@ -512,7 +524,9 @@ a {
 }
 
 @media (orientation: landscape) {
+
     .pastilla-encabezado{
+        padding-bottom: 40px;
         .pastilla-imagen{
             height: 260px;
         }
@@ -522,6 +536,7 @@ a {
     }
 
     .pastilla-tiempo{
+        padding-top: 30px;
         .pastilla-fila{
             .pastilla-duracion{
                 font-size: 20px;
@@ -549,6 +564,9 @@ a {
             display: flex;
             gap: 25px;
             align-items: center;
+            h3{
+                font-size: 25px;
+            }
             .pastilla-tarjeta{
                 height: auto;
                 width: 70%;
@@ -567,12 +585,14 @@ a {
                         cursor: pointer;
                         background-color: blue;
                         color: white;
+                        transition:calc(.5s);
                     }
                     .pastilla-boton2:hover{
                         cursor: pointer;
-                        background-color: white;
+                        background-color: rgb(226, 226, 226);
                         color: blue;
                         border: solid 1px blue;
+                        transition:calc(.5s);
                     }
                 }
             }
