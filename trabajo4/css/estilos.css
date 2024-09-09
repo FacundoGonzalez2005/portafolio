@@ -194,6 +194,12 @@ a {
                 }
             }
         }
+        .pastilla-.contenedor {
+            cursor: pointer;
+            border: solid 3px orange;
+            transform: scale(1.03);
+            transition: calc(.5s);
+        }
     }
 }
 
@@ -256,6 +262,25 @@ a {
                 height: 200px;
                 flex: 1 1 calc(50% - 20px); /* Ajusta el tamaño para dos columnas con margen */
                 display: flex;
+                .pastilla{
+                    .pastilla-imagen {
+                        img {
+                            height: 120px;
+                        }
+                    }
+                    .pastilla-texto {
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 22px;
+                        gap: 15px;
+                        p:nth-child(2) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            .pastilla-contenedor:hover {
+                border: solid 3px orange;
             }
         }
     }
@@ -626,6 +651,7 @@ a {
     width: 80%; /* Ancho del modal */
     max-width: 500px; /* Ancho máximo */
     position: relative;
+    border-radius: 8%;
 }
 
 /* Estilo para el textarea */
@@ -685,6 +711,7 @@ textarea {
 
     .modal-content {
         margin-top: 15%;
+        border-radius: 20px;
     }
 
 }
