@@ -49,15 +49,24 @@ fetch("json/pastilla.json")
 
       cartaRestaurante.addEventListener("click", function () {
         let idRestauranteSeleccionado = restaurante.truck_id;
-        // almaceno en CACHÉ la variable indiceCache el valor de idRestauranteSeleccionado
         localStorage.setItem("indiceCache", idRestauranteSeleccionado);
         console.log(idRestauranteSeleccionado);
       });
 
       resto.appendChild(cartaRestaurante);
     }
+
+    // Código para redirigir con pastilla2
+    const pastilla2 = document.querySelector('.pastilla2');
+    if (pastilla2) {
+        pastilla2.addEventListener('click', function(event) {
+            event.preventDefault();
+            const pastillaId = pastilla2.getAttribute('data-id');
+            localStorage.setItem('pastillaId', pastillaId);
+            window.location.href = 'pastilla.html';
+        });
+    }
   });
 
-// obtengo desde la caché el valor almacenado en indiceCache
+// Obtengo desde la caché el valor almacenado en indiceCache
 console.log("con localstorage " + localStorage.getItem("indiceCache"));
-let k = localStorage.getItem("indiceCache");
