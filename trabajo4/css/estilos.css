@@ -374,6 +374,7 @@ a {
     background-color: orange;
     color: white;
     border: 0;
+    cursor: pointer;
     i {
         font-size: 20px;
         font-weight: 900;
@@ -389,6 +390,7 @@ a {
     background-color: white;
     color: white;
     border: 0;
+    cursor: pointer;
     i {
         font-size: 20px;
         font-weight: 900;
