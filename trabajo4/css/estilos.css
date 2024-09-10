@@ -365,7 +365,6 @@ a {
             transition: calc(.5s);
         }
     }
-
 }
 
 .check {
@@ -373,6 +372,21 @@ a {
     border-radius: 20px;
     font-size: 0px;
     background-color: orange;
+    color: white;
+    border: 0;
+    i {
+        font-size: 20px;
+        font-weight: 900;
+    }
+}
+
+
+.check.vacio {
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 0px;
+    border:solid 2px orange!important;
+    background-color: white;
     color: white;
     border: 0;
     i {

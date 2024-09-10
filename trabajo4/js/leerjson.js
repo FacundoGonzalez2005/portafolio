@@ -6,47 +6,50 @@ fetch("json/pastilla.json")
     for (let i = 0; i < 5; i++) {
       let restaurante = data[i];
       let horaOriginal = restaurante.hora;
-      
+
       // Añadir 5 minutos a la hora
       let [hora, minutos] = horaOriginal.split(':').map(Number);
       minutos += 5;
-      
+
       // Ajustar minutos y hora en caso de que los minutos sean mayores o iguales a 60
       if (minutos >= 60) {
         minutos -= 60;
         hora += 1;
       }
-      
+
       // Formatear la nueva hora en formato HH:MM
       let nuevaHora = `${hora.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}`;
 
-      let cartaRestaurante = document.createElement("a");
+      let cartaRestaurante = document.createElement("div");
       cartaRestaurante.setAttribute("id", restaurante.truck_id);
-      cartaRestaurante.setAttribute("href", "pastilla.html");
-      cartaRestaurante.setAttribute("onClick", "guardarid(id)");
       cartaRestaurante.classList.add("resto");
       cartaRestaurante.id = restaurante.truck_id;
-      
+
       cartaRestaurante.innerHTML = /*html*/ `
-            <a class="pastilla-contenedor" href="pastilla.html">
+            <div class="pastilla-contenedor" >
                 <div class="pastilla">
-                    <div class="pastilla-imagen">
+                    <a class="pastilla-imagen" href="pastilla.html">
                         <img src=${restaurante.imagen} alt="">
-                    </div>
-                    <div class="pastilla-texto">
+                    </a>
+                    <a class="pastilla-texto" href="pastilla.html">
                         <p>${restaurante.nombre}</p>
                         <p>Hoy a las ${restaurante.hora}</p>
-                    </div>
+                    </a>
                     <div class="pastilla-boton">
-                        <button class="check" id="check"><i class="fa fa-check"></i></button>
+                        <button class="check vacio" id="check-${i}">
+                            <i class="fa fa-check"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="recordatorio">
-                    <span class="recordatorio-boton"><i class="fa-solid fa-clock"></i>Bebelo a las ${nuevaHora}</span>
+                <div class="recordatorio" id="recordatorio-${i}">
+                    <span class="recordatorio-boton">
+                        <i class="fa-solid fa-clock"></i>Bébelo a las ${nuevaHora}
+                    </span>
                 </div>
-            </a>
+            </div>
         `;
 
+      // Almacenar el ID de la pastilla seleccionada en localStorage
       cartaRestaurante.addEventListener("click", function () {
         let idRestauranteSeleccionado = restaurante.truck_id;
         localStorage.setItem("indiceCache", idRestauranteSeleccionado);
@@ -54,19 +57,35 @@ fetch("json/pastilla.json")
       });
 
       resto.appendChild(cartaRestaurante);
+
+      // Evento para marcar el checkbox
+      let checkButton = document.querySelector(`#check-${i}`);
+      checkButton.addEventListener("click", function (event) {
+        event.stopPropagation(); // Evitar que se active el evento del div
+        checkButton.classList.toggle("vacio");
+        console.log("Checkbox toggled");
+      });
+
+      // Evento para la recordatorio
+      let recordatorioButton = document.querySelector(`#recordatorio-${i}`);
+      recordatorioButton.addEventListener("click", function (event) {
+        event.stopPropagation(); // Evitar redirección o cualquier otro evento
+        checkButton.classList.toggle("vacio"); // Alternar la clase 'vacio' del checkbox correspondiente
+        console.log("Recordatorio clickeado, clase 'vacio' alternada");
+      });
     }
 
     // Código para redirigir con pastilla2
     const pastilla2 = document.querySelector('.pastilla2');
     if (pastilla2) {
-        pastilla2.addEventListener('click', function(event) {
-            event.preventDefault();
-            const pastillaId = pastilla2.getAttribute('data-id');
-            localStorage.setItem('pastillaId', pastillaId);
-            window.location.href = 'pastilla.html';
-        });
+      pastilla2.addEventListener('click', function (event) {
+        event.preventDefault();
+        const pastillaId = pastilla2.getAttribute('data-id');
+        localStorage.setItem('pastillaId', pastillaId);
+        window.location.href = 'pastilla.html';
+      });
     }
   });
 
-// Obtengo desde la caché el valor almacenado en indiceCache
-console.log("con localstorage " + localStorage.getItem("indiceCache"));
+// Obtener desde localStorage el valor almacenado en indiceCache
+console.log("con localStorage " + localStorage.getItem("indiceCache"));
