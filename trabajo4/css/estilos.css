@@ -1290,6 +1290,9 @@ select {
     .titulo-carga{
         position:absolute;
         top: 0;
+        width: 95%;
+        font-size: 20px;
+        padding: 11.2px 0;
     }
     .cargar-pastilla-iconos{
         padding-top: 7%;
