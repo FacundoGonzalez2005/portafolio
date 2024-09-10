@@ -260,7 +260,7 @@ a {
         .contenedor {
             flex-direction: row;
             flex-wrap: wrap;
-            gap: 40px; /* Ajusta el espacio entre columnas */
+            gap: 55px; /* Ajusta el espacio entre columnas */
             padding-left: 7%;
             padding-top: 5%;
             .pastilla-contenedor {
