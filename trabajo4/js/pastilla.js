@@ -1,4 +1,4 @@
-let resto = document.querySelector(".pastilla-encabezado");
+let pastillaEncabezado = document.querySelector(".pastilla-encabezado");
 console.log(localStorage.getItem("indiceCache"));
 
 fetch("json/pastilla.json")
@@ -6,19 +6,19 @@ fetch("json/pastilla.json")
     return response.json();
   })
   .then((data) => {
-    data.forEach(plato => {
-        if(plato.truck_id == localStorage.getItem("indiceCache")){
-            resto.innerHTML += `
+    data.forEach(pastilla => {
+        if (pastilla.truck_id == localStorage.getItem("indiceCache")) {
+            pastillaEncabezado.innerHTML += `
             <div class="pastilla-imagen">
-                <img src=${plato.imagen} alt="">
+                <img src=${pastilla.imagen} alt="">
             </div>
             <div class="pastilla-texto">
-                <h2>${plato.nombre}</h2>
-                <span>${plato.descripcion}</span>
-            </div> `
+                <h2>${pastilla.nombre}</h2>
+                <span>${pastilla.descripcion}</span>
+            </div>`;
         }
     });
-})
+});
 
 // Selecciona el contenedor donde se mostrará la información
 let duracion = document.querySelector(".pastilla-tiempo");
@@ -43,16 +43,16 @@ function sumarHoras(hora, horasASumar) {
 fetch("json/pastilla.json")
   .then((response) => response.json())
   .then((data) => {
-    data.forEach(plato => {
-        if (plato.truck_id === indiceCache) {
-            let horaModificada = sumarHoras(plato.hora, 5);
+    data.forEach(pastilla => {
+        if (pastilla.truck_id === indiceCache) {
+            let horaModificada = sumarHoras(pastilla.hora, 5);
             let tarjetasHTML = '';
-            if (plato.cantidad.includes("2")) {
+            if (pastilla.cantidad.includes("2")) {
                 tarjetasHTML = `
                 <section class="pastilla-tarjeta">
                     <div class="pastilla-info">
-                        <h4>Hoy a las ${plato.hora}</h4>
-                        <h5>1 cápsula de ${plato.nombre}</h5>
+                        <h4>Hoy a las ${pastilla.hora}</h4>
+                        <h5>1 cápsula de ${pastilla.nombre}</h5>
                     </div>
                     <div class="pastilla-fila-botones">
                         <div class="pastilla-boton1">
@@ -67,7 +67,7 @@ fetch("json/pastilla.json")
                 <section class="pastilla-tarjeta">
                     <div class="pastilla-info">
                         <h4>Hoy a las ${horaModificada}</h4>
-                        <h5>1 cápsula de ${plato.nombre}</h5>
+                        <h5>1 cápsula de ${pastilla.nombre}</h5>
                     </div>
                     <div class="pastilla-fila-botones">
                         <div class="pastilla-boton1">
@@ -82,8 +82,8 @@ fetch("json/pastilla.json")
                 tarjetasHTML = `
                 <section class="pastilla-tarjeta">
                     <div class="pastilla-info">
-                        <h4>Hoy a las ${plato.hora}</h4>
-                        <h5>1 cápsula de ${plato.nombre}</h5>
+                        <h4>Hoy a las ${pastilla.hora}</h4>
+                        <h5>1 cápsula de ${pastilla.nombre}</h5>
                     </div>
                     <div class="pastilla-fila-botones">
                         <div class="pastilla-boton1">
@@ -100,11 +100,11 @@ fetch("json/pastilla.json")
             <section class="pastilla-fila">
                 <section class="pastilla-duracion">
                     <span>Duración</span>
-                    <span><i class="fa-regular fa-calendar"></i>${plato.duracion}</span>
+                    <span><i class="fa-regular fa-calendar"></i>${pastilla.duracion}</span>
                 </section>
                 <section class="pastilla-frecuencia">
                     <span>Frecuencia</span>
-                    <span><i class="fa-regular fa-clock"></i>${plato.cantidad}</span>
+                    <span><i class="fa-regular fa-clock"></i>${pastilla.cantidad}</span>
                 </section>
             </section>
 
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch("json/pastilla.json")
             .then(response => response.json())
             .then(data => {
-                const pastilla = data.find(plato => plato.truck_id === localStorage.getItem("indiceCache"));
+                const pastilla = data.find(p => p.truck_id === localStorage.getItem("indiceCache"));
                 if (pastilla) {
                     nombreInput.value = pastilla.nombre;
                     descripcionInput.value = pastilla.descripcion;
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch("json/pastilla.json")
             .then(response => response.json())
             .then(data => {
-                const pastilla = data.find(plato => plato.truck_id === indiceCache);
+                const pastilla = data.find(p => p.truck_id === indiceCache);
                 if (pastilla) {
                     pastilla.nombre = nombre;
                     pastilla.descripcion = descripcion;
